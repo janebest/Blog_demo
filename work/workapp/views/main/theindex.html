@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="/public/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="/public/css/index.css" rel="stylesheet" type="text/css">
+    <script src="/public/js/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="##">
+                <img src="/public/images/navtitle.png" alt="">
+            </a>
+        </div>
+        <div>
+            <div class="nav">
+                <nav class="menu">
+                    <ol>
+                        <li class="menu-item"><a href="#0">首页</a></li>
+                        <li class="menu-item"><a href="/">文创</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">博物</a></li>
+                                <li class="menu-item"><a href="#0">文玩</a></li>
+                            </ol>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#0">导览</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">开放时间</a></li>
+                                <li class="menu-item"><a href="#0">票务服务</a></li>
+                                <li class="menu-item"><a href="#0">交通路线</a></li>
+                                <li class="menu-item"><a href="#0">游览须知</a></li>
+                            </ol>
+                        </li>
+                        <li class="menu-item"><a href="#0">展览</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">近期展览</a></li>
+                                <li class="menu-item"><a href="#0">专管</a></li>
+                                <li class="menu-item"><a href="#0">原状陈列</a></li>
+                                <li class="menu-item"><a href="#0">赴外展览</a></li>
+                            </ol>
+                        </li>
+                        <li class="menu-item"><a href="#0">教育</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">教育新闻</a></li>
+                                <li class="menu-item"><a href="#0">故宫博物院教育中心</a></li>
+                                <li class="menu-item"><a href="#0">国际博协培训中心</a></li>
+                                <li class="menu-item"><a href="#0">故宫志愿者</a></li>
+                            </ol>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#0">探索</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">建筑</a></li>
+                                <li class="menu-item"><a href="#0">藏品</a></li>
+                                <li class="menu-item"><a href="#0">古籍</a></li>
+                                <li class="menu-item"><a href="#0">宫廷历史</a></li>
+                                <li class="menu-item"><a href="#0">藏品总目</a></li>
+                            </ol>
+                        </li>
+                        <li class="menu-item"><a href="#0">学术</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">学术活动</a></li>
+                                <li class="menu-item"><a href="#0">专家目录</a></li>
+                                <li class="menu-item"><a href="#0">故宫研究院</a></li>
+                                <li class="menu-item"><a href="#0">故宫学院</a></li>
+                            </ol>
+                        </li>
+                        <li class="menu-item"><a href="#0">关于</a>
+                            <ol class="sub-menu">
+                                <li class="menu-item"><a href="#0">做说</a></li>
+                                <li class="menu-item"><a href="#0">领导</a></li>
+                                <li class="menu-item"><a href="#0">资讯</a></li>
+                                <li class="menu-item"><a href="#0">院史编年</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="focus">
+            <div class="bigimg" style="position: relative;">
+                <a href="##" id="biglink">
+                    <img src="/public/images/banner1.jpg" id="bigimg" />
+                </a>
+                <ul class="point" id="point">
+                    <li index=1 class="dot"></li>
+                    <li index=2 class="dot"></li>
+                    <li index=3 class="dot"></li>
+                    <li index=4 class="dot"></li>
+                    <li index=5 class="dot"></li>
+                </ul>
+                <div class="sideleft" onclick="pre();" id="pre">
+                    <a href="##"></a>
+                </div>
+                <div class="sideright" onclick="next();" id="next">
+                    <a href="##"></a>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="block1">
+                <div class="left">
+                    <div>
+                        <div class="box1">
+                            <div class="img">
+                                <img src="/public/images/up.png" id="imgup" />
+                            </div>
+                        </div>
+                        <div class="box2">
+                            <div class="img">
+                                <a href="##">
+                                    <img src="/public/images/upup.jpg" id="scaleup" />
+                                </a>
+                            </div>
+                            <div class="news">
+                                <div class="title">
+                                    <h1>
+                                        <span class="titspan">
+                                            <img src="/public/images/icon1.png" />
+                                        </span>
+                                        <span class="s1">故宫</span>
+                                        <span>资讯</span>
+                                        <span class="titspan">
+                                            <img src="/public/images/icon2.png" />
+                                        </span>
+                                    </h1>
+                                    <div class="change">
+                                        <a href="javascript:;">换一换</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="clist">
+                                        <div class="active" id="item">
+                                            <ul>
+                                                <li>
+                                                    <a href="##">【声明】关于故宫博物院在职、离退休人员参加社会文物鉴定等公务性活动的声明
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                                <li>
+                                                    <a href="##">【严正声明】关于我院依法对“故宫博物院”享有名称权和对已注册商标的商标专用权的严正声明
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="" id="item">
+                                            <ul>
+                                                <li>
+                                                    <a href="##">故宫博物院与香港特区渔护署签署谅解备忘录
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                                <li>
+                                                    <a href="##">有界之外：卡地亚•故宫博物院工艺与修复特展”开幕式在故宫博物院举办
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                                <li>
+                                                    <a href="##">关于故宫博物院网络售票网站系统更新及域名切换的公告
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="" id="item">
+                                            <ul>
+                                                <li>
+                                                    <a href="##">传心之美——梵蒂冈博物馆藏中国文物展”开幕"
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                                <li>
+                                                    <a href="##">关于南大库家具馆临时闭馆的公告
+                                                        <em>
+                                                            <img src="/public/images/icon3.png">
+                                                        </em></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="box3">
+                        <div>
+                            <ul>
+                                <li class="l1">
+                                    <a href="##">
+                                        <div class="bg">
+                                            <img src="/public/images/rbg1.png" />
+                                        </div>
+                                        <div class="ico">
+                                            <img src="/public/images/zxyy.png" />
+                                        </div>
+                                        <div class="cont">
+                                            <h3>在线预约订票</h3>
+                                            <p>贴心的票务服务，让您省时省力更省心</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="l2">
+                                    <a href="##">
+                                        <div class="bg">
+                                            <img src="/public/images/rbg2.png" />
+                                        </div>
+                                        <div class="ico">
+                                            <img src="/public/images/qj.png" />
+                                        </div>
+                                        <div class="cont">
+                                            <h3>全景虚拟游览</h3>
+                                            <p>随时随地，为您提供身临其境的游览体验</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="l3">
+                                    <a href="##">
+                                        <div class="bg">
+                                            <img src="/public/images/rbg3.png" />
+                                        </div>
+                                        <div class="ico">
+                                            <img src="/public/images/bwg.png" />
+                                        </div>
+                                        <div class="cont">
+                                            <h3>博物馆活动</h3>
+                                            <p>从故宫开始，感受历史的魅力</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box4">
+                        <div class="rightside">
+                            <div>
+                                <div class="title">
+                                    <h1>
+                                        <span class="titspan">
+                                            <img src="/public/images/icon1.png" />
+                                        </span>
+                                        <span class="s1">时间</span>
+                                        <span>票务</span>
+                                        <span class="titspan">
+                                            <img src="/public/images/icon2.png" />
+                                        </span>
+                                    </h1>
+                                    <div class="more">
+                                        <a href="##">更多</a>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <h1>08:30</h1>
+                                            <p>开始售票、开放进馆时间</p>
+                                        </li>
+                                        <li>
+                                            <h1>16:00</h1>
+                                            <p>止票时间（含钟表馆、珍宝馆）</p>
+                                        </li>
+                                        <li>
+                                            <h1>16:10</h1>
+                                            <p>停止入馆时间</p>
+                                        </li>
+                                        <li class="last">
+                                            <h1>17:30</h1>
+                                            <p>闭馆时间</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tip">
+                                    <p>
+                                        <span>
+                                            <i>旺 季 门 票</i>
+                                            每张门票为人民币60元（不包括珍宝馆、钟表馆）
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span>
+                                            <i>珍宝馆门票</i>
+                                            每张门票为人民币10元
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span>
+                                            <i>钟表馆门票</i>
+                                            每张门票为人民币10元
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rightside">
+                            <div class="title">
+                                <h1>
+                                    <span class="titspan">
+                                        <img src="/public/images/icon1.png" />
+                                    </span>
+                                    <span class="s1">开放</span>
+                                    <span>公告</span>
+                                    <span class="titspan">
+                                        <img src="/public/images/icon2.png" />
+                                    </span>
+                                </h1>
+                                <div class="more">
+                                    <a href="##">更多</a>
+                                </div>
+                            </div>
+                            <div class="blist">
+                                <div class="item1">
+                                    <ul>
+                                        <li>
+                                            <a href="##">故宫博物院于2018年6月开始实行除法定节假日外周一全年闭馆
+                                                <em>
+                                                    <img src="/public/images/icon3.png">
+                                                </em>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="##">故宫博物院实行全部网络购票
+                                                <em>
+                                                    <img src="/public/images/icon3.png">
+                                                </em>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block2">
+                <div class="box">
+                    <div>
+                        <div class="title">
+                            <h1>
+                                <span class="titspan">
+                                    <img src="/public/images/icon1.png" />
+                                </span>
+                                <span class="s1">故宫</span>
+                                <span>藏品</span>
+                                <span class="titspan">
+                                    <img src="/public/images/icon2.png" />
+                                </span>
+                            </h1>
+                        </div>
+                        <i class="middle"></i>
+                        <div class="num">
+                            <b id="count">1,862,690</b>
+                            <p>
+                                <img src="/public/images/indexicon1.png" />
+                            </p>
+                        </div>
+                        <i class="middle"></i>
+                        <div class="tip">
+                            <span>
+                                藏品分类查询
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list" id="list">
+                    <li>
+                        <img src="/public/images/list1.jpg" />
+                        <div class="mask">
+                            <a href="##">
+                                <p>金廷标儿童斗草图轴</p>
+                                <p>清</p>
+                                <p>纵105.3厘米，横79.5厘米</p>
+                                <p></p>
+                                <p>此图表现的是儿童们以各种花草相斗来决胜负游戏。有的以比赛采得的花草作对，这是文斗；有的把叶柄相勾拉拽，也称“拔根儿”，就是武斗。</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/public/images/list2.jpg" />
+                        <div class="mask">
+                            <a href="##">
+                                <p>掐丝珐琅花卉纹兽耳活环婴足鼓式盖炉</p>
+                                <p>清中期</p>
+                                <p>高38厘米，口径23厘米</p>
+                                <p></p>
+                                <p class="jj">
+                                    此炉盖巧妙地用绣球上玩耍的两个小童作为装饰。三足皆为童子造型，正面的童子以脊背负驮炉身；另两个小童侧身弓步，以胸腹及双手承托炉身，仿佛正要将大鼓抬走。</p>
+                                <p class="pos"></p>
+                                <h1></h1>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="/public/images/list3.jpg" />
+                        <div class="mask">
+                            <a href="##">
+                                <p>陈洪绶童子礼佛图轴</p>
+                                <p>明</p>
+                                <p>纵150厘米，横67.3厘米</p>
+                                <p></p>
+                                <p class="jj">此图描绘四名童子搭佛塔礼佛的情景，有的拜佛，有的献花，还有跪着擦拭铜塔，他们收敛起顽皮，神态专注、庄重，其中还有的在磕头时露出胖臀，令人忍俊不禁。
+                                </p>
+                                <p class="pos"></p>
+                                <h1></h1>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="block4">
+                <div class="box">
+                    <div class="router">
+                        <div class="routerlist">
+                            <div class="routerscroll">
+                                <div class="nav_l1">
+                                    <h1>
+                                        <img src="/public/images/list_dragon1.png" alt="">
+                                        推荐路线
+                                    </h1>
+                                    <div class="item">
+                                        <div class="nav_l2">
+                                            <h2>两小时游</h2>
+                                            <!-- <span>+</span> -->
+                                        </div>
+                                        <div class="nav_l2">
+                                            <h2>半日游</h2>
+                                            <!-- <span>+</span> -->
+                                        </div>
+                                        <div class="nav_l2">
+                                            <h2>一日游</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav_l1">
+                                    <h1>
+                                        <img src="/public/images/list_dragon1.png" alt="">
+                                        主题导览
+                                    </h1>
+                                    <div class="item">
+                                        <div class="nav_l2">
+                                            <h2>宫廷建筑</h2>
+                                            <!-- <span>+</span> -->
+                                        </div>
+                                        <div class="nav_l2">
+                                            <h2>宫廷历史</h2>
+                                            <!-- <span>+</span> -->
+                                        </div>
+                                        <div class="nav_l2">
+                                            <h2>展馆专馆</h2>
+                                            <!-- <span>+</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="nav_l1">
+                                    <h1>
+                                        <img src="/public/images/list_dragon1.png" alt="">
+                                        服务设施
+                                    </h1>
+                                    <div class="item">
+                                        <div class="nav_l2">
+                                            <h2>服务设施</h2>
+                                            <!-- <span>+</span> -->
+                                        </div>
+                                        <div class="nav_l2">
+                                            <h2>无障碍通道</h2>
+                                        </div>
+                                        <div class="nav_l2">
+                                            <h2>未开放区域</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="picbox">
+                        <div class="center">
+                            <div class="map">
+                                <img src="/public//images/map.jpg" alt="">
+                            </div>
+                            <!-- <ul class="tools">
+                                <li>
+                                    <a href="#">
+                                        放大
+                                        <img src="/public/images/ico_tools1.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        缩小
+                                        <img src="/public/images/ico_tools2.png" alt="">
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block3">
+                <div class="scrolllist">
+                    <ul>
+                        <li>
+                            <a href="##">
+                                <div class="baimg">
+                                    <img src="/public/images/tsg.jpg" />
+                                </div>
+                                <div class="mask m2"></div>
+                                <div class="cout">
+                                    <img src="/public/images/tsg1.png" />
+                                    <p>图书馆</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="##">
+                                <div class="baimg">
+                                    <img src="/public/images/stg.jpg" />
+                                </div>
+                                <div class="mask m2"></div>
+                                <div class="cout">
+                                    <img src="/public/images/stg1.png" />
+                                    <p>视听馆</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="##">
+                                <div class="baimg">
+                                    <img src="/public/images/zpzm.jpg" />
+                                </div>
+                                <div class="mask m2"></div>
+                                <div class="cout">
+                                    <img src="/public/images/zpzm1.png" />
+                                    <p>藏品总目</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="##">
+                                <div class="baimg">
+                                    <img src="/public/images/stg.jpg" />
+                                </div>
+                                <div class="mask m2"></div>
+                                <div class="cout">
+                                    <img src="/public/images/qj.png" />
+                                    <p>全景故宫</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="##">
+                                <div class="baimg">
+                                    <img src="/public/images/zpzm.jpg" />
+                                </div>
+                                <div class="mask m2"></div>
+                                <div class="cout">
+                                    <img src="/public/images/vgg.png" />
+                                    <p>图书馆</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <div class="num">
+                网站访问量
+                <span class="inner">
+                    <i>4</i>
+                    <i>6</i>
+                    <i>9</i>
+                    <i>7</i>
+                    <i>6</i>
+                    <i>7</i>
+                    <i>1</i>
+                    <i>4</i>
+                </span>
+            </div>
+            <div class="nav_foot">
+                <a href="##"> 网站地图</a>
+                &nbsp;&nbsp;
+                <a href="##"> 相关链接</a>
+                &nbsp;&nbsp;
+                <a href="##"> 影像授权</a>
+                &nbsp;&nbsp;
+                <a href="##"> 隐私政策</a>
+                &nbsp;&nbsp;
+                <a href="##"> 版权声明</a>
+                &nbsp;&nbsp;
+                <a href="##"> 常见问题</a>
+                &nbsp;&nbsp;
+                <a href="##"> 联系我们</a>
+                &nbsp;&nbsp;
+                <a href="##"> 关于我们</a>
+                &nbsp;&nbsp;
+            </div>
+            <div class="copyright">
+                Copyright © 2015 故宫博物院. All Rights Reserved 京ICP备05067311号-1
+                <a href="##" target="_blank">网站建设</a>
+                ：
+                <a href="##" target="_blank">北京分形科技</a>
+            </div>
+            <div class="btns">
+                <a href="##">浏览建议</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        // var navul = document.getElementsByClassName('navul')[0];
+        // var oLi = navul.getElementsByTagName("li");
+        // for (var i = 0; i < oLi.length; i++) {
+        //     oLi[i].onmouseover = function () {
+        //         if (this.className == "navulli") {
+        //             var oUl = this.getElementsByTagName("ul")[0];
+        //             oUl.style.display = "block";
+        //         }
+        //     }
+        //     oLi[i].onmouseout = function () {
+        //         if (this.className == "navulli") {
+        //             var oUl = this.getElementsByTagName("ul")[0];
+        //             oUl.style.display = "none";
+        //         }
+        //     }
+        // }
+        //图片右移
+        var list = document.getElementById("list");
+        var lis = list.getElementsByTagName("li");
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function () {
+                this.getElementsByClassName("mask")[0].style = "left:0px;transition-duration: 2s;";
+            }
+            lis[i].onmouseout = function () {
+                this.getElementsByClassName("mask")[0].style = "left:-909px;transition-duration: 2s;";
+            }
+        }
+        //数字递增
+        var num = 0;
+        var t = setInterval(function () {
+            num++;
+            var count = document.getElementById("count");
+            count.innerText = num;
+            if (num == 1862690) {
+                clearInterval(t);
+            }
+        }, 0.1);
+        //换一换
+        var change = document.querySelector(".change a"),
+            clist = document.querySelector(".clist"),
+            div = document.querySelectorAll(".clist div"),
+            index = 0;
+        change.onclick = function () {
+            for (var i = 0, len = div.length; i < len; i++) {
+                div[i].className = "";
+            }
+            index++;
+            if (index == len) index = 0;
+            div[index].className = "item active";
+
+        }
+        //图片css3
+        var imgup = document.getElementById("imgup");
+        imgup.onmouseenter = function () {
+            imgup.className = "up";
+        }
+        imgup.onmouseleave = function () {
+            imgup.className = "down";
+        }
+        var scaleup = document.getElementById("scaleup");
+        scaleup.onmouseenter = function () {
+            scaleup.className = "scaleup";
+        }
+        scaleup.onmouseleave = function () {
+            scaleup.className = "scaledown";
+        }
+        //banner轮播
+        var bannerlist = [{
+            linkhref: "http://www.baidu.com",
+            imgsrc: "/public/images/banner1.jpg"
+        }, {
+            linkhref: "http://www.baidu.com",
+            imgsrc: "/public/images/banner2.jpg"
+        }, {
+            linkhref: "http://www.baidu.com",
+            imgsrc: "/public/images/banner3.jpg"
+        }, {
+            linkhref: "http://www.baidu.com",
+            imgsrc: "/public/images/banner4.jpg"
+        }, {
+            linkhref: "http://www.baidu.com",
+            imgsrc: "/public/images/banner5.jpg"
+        }]
+        var point = document.getElementById("point");
+        var linodes = point.getElementsByTagName("li");
+        var bigimg = document.getElementById("bigimg");
+        var biglink = document.getElementById("biglink");
+        var index = 0;
+        var intervalId = setInterval(changeImg, 3000)
+
+        function changeImg() {
+            index = index + 1;
+            if (index == 5) {
+                index = 0;
+            }
+            bigimg.src = bannerlist[index].imgsrc;
+            for (var i = 0; i < linodes.length; i++) {
+                if (i == index) {
+                    linodes[i].className = "move";
+                } else {
+                    linodes[i].className = "dot";
+                }
+            }
+            biglink.href = bannerlist[index].linkhref;
+        }
+        var picArr = new Array("/public/images/banner1.jpg", "/public/images/banner2.jpg", "/public/images/banner3.jpg", "/public/images/banner4.jpg", "/public/images/banner5.jpg");
+        var index = 0;
+
+        function next() {
+            index++;
+            if (index == picArr.length) {
+                index = 0;
+            }
+            document.getElementById("bigimg").src = picArr[index];
+        }
+
+        function pre() {
+            index--;
+            if (index < 0) {
+                index = picArr.length - 1;
+            }
+            document.getElementById("bigimg").src = picArr[index];
+        }
+    }
+</script>
+
+</html>
