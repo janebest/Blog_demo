@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/orderinfo.css" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="nav">
+				<ul>
+					<li>
+						<a href="##">首页</a>
+					</li>
+					<li>
+						<a href="##">手机数码</a>
+					</li>
+					<li>
+						<a href="##">电脑办公</a>
+					</li>
+					<li>
+						<a href="##">衣服用品</a>
+					</li>
+					<li>
+						<a href="##">
+							<img src="img/title.png" />
+						</a>
+					</li>
+					<li>
+						<a href="##">
+							<i class="icon-login"></i>
+							<span >登陆</span>
+						</a>
+					</li>
+					<li>
+						<a href="##">
+						<i class="iconcart"></i>
+						<span >购物车</span>
+						</a>
+					</li>
+					<li>
+						<a href="##">
+							<i class="iconcall"></i>
+						<span >在线客服</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="section">
+				<ul>
+					<li>
+						<i style="background-color: #1428a0;">1</i>
+						<a style="color: #1428a0;">查看购物车</a>
+					</li>
+					<li>
+						<i  style="background-color: #1428a0;">2</i>
+						<a style="color: #1428a0;">确认订单信息</a>
+					</li>
+					<li>
+						<i style="background-color: #1428a0;">3</i>
+						<a style="color: #1428a0;">提交并付款</a>
+					</li>
+				</ul>
+			</div>
+			<div class="order">
+				<span class="myorder">我的订单</span>
+				<div class="orderlist">
+					<ul>
+						<li>
+							<a>全部</a>
+						</li>
+						<li class="isclick">
+							<a>待付款</a>
+						</li>
+						<li>
+							<a>待发货</a>
+						</li>
+						<li>
+							<a>待收货</a>
+						</li>
+						<li>
+							<a>待评价</a>
+						</li>
+					</ul>
+				</div>
+				<div class="shouhuo">
+					<div class="tab">
+						<table class="bought">
+							<tbody class="boughthead">
+								<tr class="odernumber">
+									<td>
+										<label>
+											<img src="img/title.png" />
+											<a href="##">三星网上商城</a>
+										</label>
+									</td>
+									<td>
+										<label>
+											<span class="date">2018-12-29</span>
+											<span>订单号: 259325703929787297</span>
+										</label>
+									</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>
+										<div class="suborder">
+											<div class="buyphone">
+												<a>
+													<img src="img/phone.jpg" />
+												</a>
+											</div>
+											<div class="some">
+												<p>
+													<a href="##" style="color: #337AB7;">Galaxy A6s</a>
+												</p>
+												<p style="font-size: 12px;margin-top: 11px;">花木蓝&nbsp;6GB RAM<br>64GB ROM&nbsp;公开版&nbsp;</p>
+											</div>
+											<div class="price">
+												<p class="before">￥1799.00</p>
+												<p>￥1699.00</p>
+												<p>  1  </p>
+												<p>退款/退换货</p>
+												<p>保险服务   ￥0.00</p>
+												<a href="##" class="info">订单详情</a>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+			<div class="checkout">
+				<div class="checkinfo">
+					<div class="checkleft" style="float: left;">
+						<div class="group">
+							<div class="titlebg">收货信息</div>
+							<div class="rowlist">
+								<div class="formgroup">
+									<label>收货人</label>
+										<div class="forminput">
+											<input type="text" name="username" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="rowlist">
+								<div class="formgroup">
+									<label>联系电话</label>
+										<div class="forminput">
+											<input type="text" name="phonenumber" placeholder="">
+									</div>
+								</div>
+							</div>
+							<div class="address">
+								<div class="formgroup">
+								<label>收货地址</label>
+								<div class="selects" id="selects">
+									<div class="shengfen" title="0">
+											<a class="citytext">
+											    <span id="chooses" style="margin-left: 10px;">请选择省</span>
+											</a>
+											<a>
+												<i class="caret"></i>
+											</a>
+									</div>
+									<div class="city" title="1">
+										<a class="citytext">
+											    <span id="choosecity" style="margin-left: 10px;">请选择市</span>
+											</a>
+											<a>
+												<i class="caret"></i>
+											</a>
+									</div>
+									<div class="qu" title="2">
+										<a class="citytext">
+											    <span id="choosequ" style="margin-left: 10px;">请选择区</span>
+											</a>
+											<a>
+												<i class="caret"></i>
+											</a>
+									</div>
+									<div class="more">
+											<div class="forminput">
+												<input id="contactAddress" type="text" placeholder="详细街道地址">
+												<span class="msg-block">
+													<span></span>
+											    </span>
+										    </div>
+									    </div>
+								    </div>
+								    <div class="ttab">
+										<div id="sc" class="submenu" style="display: none;position: relative;margin: -58px 0 0 0;background: #ffffff;">
+									        <div class="viewport">
+									            <ul class="citycontent" id="shenfen">
+									            	<li>
+									            		<a>请选择省</a>
+									            	</li>
+									            	<li>
+									            		<a>北京</a>
+									            	</li>
+									            	<li>
+									            		<a>天津</a>
+									            	</li>
+									            	<li>
+									            		<a>河北省</a>
+									            	</li>
+									            	<li>
+									            		<a>山西省</a>
+									            	</li>
+									            	<li>
+									            		<a>内蒙古自治区</a>
+									            	</li>
+									            	<li>
+									            		<a>辽宁省</a>
+									            	</li>
+									            	<li>
+									            		<a>吉林省</a>
+									            	</li>
+									            	<li>
+									            		<a>黑龙江省</a>
+									            	</li>
+									            	<li>
+									            		<a>上海</a>
+									            	</li>
+									        </div>
+									    </div>
+									    
+									    <div id="cityc" class="submenu" style="display: none;margin: -59px 0 0 255px;">
+									        <div class="viewport" style="width: 36.6%;">
+									            <ul class="citycontent" id="city">
+									            	<li class="selected">
+									            		<a>请选择市</a>
+									            	</li>
+									            	<li>
+									            		<a>北京</a>
+									            	</li>
+									            	<li>
+									            		<a>天津</a>
+									            	</li>
+									            	<li>
+									            		<a>河北省</a>
+									            	</li>
+									            	<li>
+									            		<a>山西省</a>
+									            	</li>
+									            	<li>
+									            		<a>内蒙古自治区</a>
+									            	</li>
+									            	<li>
+									            		<a>辽宁省</a>
+									            	</li>
+									            	<li>
+									            		<a>吉林省</a>
+									            	</li>
+									            	<li>
+									            		<a>黑龙江省</a>
+									            	</li>
+									            	<li>
+									            		<a>上海</a>
+									            	</li>
+									        </div>
+									    </div>
+									    
+									    <div id="submenu" class="submenu" style="display: none;">
+									        <div class="viewport" style="margin: -58px -269px -2px 510px;">
+									            <ul class="citycontent" id="qu">
+									            	<li class="selected">
+									            		<a>请选择市</a>
+									            	</li>
+									            	<li>
+									            		<a>北京</a>
+									            	</li>
+									            	<li>
+									            		<a>天津</a>
+									            	</li>
+									            	<li>
+									            		<a>河北省</a>
+									            	</li>
+									            	<li>
+									            		<a>山西省</a>
+									            	</li>
+									            	<li>
+									            		<a>内蒙古自治区</a>
+									            	</li>
+									            	<li>
+									            		<a>辽宁省</a>
+									            	</li>
+									            	<li>
+									            		<a>吉林省</a>
+									            	</li>
+									            	<li>
+									            		<a>黑龙江省</a>
+									            	</li>
+									            	<li>
+									            		<a>上海</a>
+									            	</li>
+									        </div>
+									    </div>
+									</div>
+						
+								</div>
+							</div>
+						</div>
+						<div class="pay">
+							<div class="titlebg">支付方式</div>
+							<div class="payway">
+								<div class="payment">
+									<ul>
+										<li id="zfbpay">
+											<a class="zoo">
+												<span>平台支付</span>
+											</a>
+					                    </li>
+										<li id="card">
+											<a class="zoo">
+												<span>信用卡快捷支付</span>
+											</a>
+										</li>
+										<li id="wangyin">
+											<a class="zoo">
+												<span>网银支付</span>
+											</a>
+										</li>
+										<li id="fenqi">
+											<a class="zoo">
+												<span>分期付款</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="waytopay">
+									<ul>
+										<li>
+											<div class="menu" style="display: none;">
+												<div class="paycol">
+													<a class="radio"></a>
+												    <i class="lal" value="支付宝支付"></i>
+												</div>
+							                </div>
+										</li>
+										<li>
+											<div class="card" style="display: none;">
+										<ul>
+											<li>
+												<a class="zsradio"></a>
+												<i></i>
+											</li>
+											<li>
+												<a class="gdradio"></a>
+												<i></i>
+											</li>
+											<li>
+												<a class="gsradio"></a>
+												<i></i>
+											</li>
+											<li>
+												<a class="jsradio"></a>
+												<i></i>
+											</li>
+										</ul>
+									</div>
+										</li>
+										<li>
+											<div class="age" style="display: none;width: 258px;">
+												<div class="stages">
+											        <a>
+											        	<span class="three">3期</span>
+											        </a>
+											        <p>
+											        	<b>每期约￥</b>566.33
+											        </p>
+											        <p>手续费约￥0.00</p>
+											        <p>共约￥1,699.00</p>
+										        </div>
+												<div class="stages">
+											        <a>
+											        	<span>6期</span>
+											        </a>
+											        <p>
+											        	<b>每期约￥</b>283.16
+											        </p>
+											        <p>手续费约￥0.00</p>
+											        <p>共约￥1,699.00</p>
+										        </div>
+											</div>
+										</li>
+										<li>
+											<div class="menu1" style="display:none;">
+												<div class="paycol1">
+													<a class="radio1"></a>
+												    <i class="lal" value="支付宝支付"></i>
+												</div>
+							                </div>
+										</li>
+									</ul>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="checkright">
+				<div class="titlebgright">商品清单</div>
+				<div class="detailed">
+					<div class="table">
+						<ul style="border-bottom: 1px solid #f1f1f1;">
+							<li>
+								<span>商品</span>
+								<span>数量</span>
+								<span>单价</span>
+							</li>
+						</ul>
+						</div>
+						<div class="orderpart">
+							<ul>
+								<li style="padding: 7px 0 0 57px;">
+									<img src="img/phone.jpg" />
+									<p style="margin: 4px 0 0 -20px;">花木蓝 6GB RAM<br> 64GB ROM 公开版 </p>
+								</li>
+								<li style="margin: 4px 0 0 57px;">
+									<p>1</p>
+								</li>
+								<li style="margin: 4px 0 0 86px;">
+									<p>￥1,799.00</p>
+								</li>
+							</ul>
+							<ul>
+								<li style="padding: 7px 0 0 57px;">
+									<img src="img/zhijia.jpg" />
+									<p style="margin: 4px 0 0 -5px;">手机充电支架<br> (赠品) </p>
+								</li>
+								<li style="margin: 4px 0 0 70px;">
+									<p>1</p>
+								</li>
+								<li style="margin: 4px 0 0 86px;">
+									<p>￥0.00</p>
+								</li>
+							</ul>
+							<ul>
+								<li style="padding: 7px 0 0 57px;">
+									<img src="img/gtx.jpg" />
+									<p style="margin: 4px 0 0 -20px;">钢铁侠10000mAh<br> 移动电源（赠品） </p>
+								</li>
+								<li style="margin: 4px 0 0 57px;">
+									<p>1</p>
+								</li>
+								<li style="margin: 4px 0 0 86px;">
+									<p>￥0.00</p>
+								</li>
+							</ul>
+						</div>
+						<div class="checkoutnums">
+							<p>商品金额
+								<span>￥1,799.00</span>
+							</p>
+							<p>优惠金额
+								<span>￥100.00</span>
+							</p>
+							<p>运费
+								<span style="margin-left: 217px;">￥0.00</span>
+							</p>
+						</div>
+				</div>
+					<div class="say">
+							<p class="mail">
+								<label>输入邮箱以接收邮件通知，查询订单状态</label>
+							</p>
+							<input type="text" placeholder="请输入邮箱地址">
+							<p>
+								<span id="red">*我接受</span>
+								<a href="##" style="color: #337AB7;">三星网上商城使用条款</a>
+								<span>
+									<span>请您详细阅读并保留条款内容（保留方式不限，需含条款页面网址、保留时间等）</span>
+								</span>
+								<a class="btnsubmit">提交订单</a>
+							</p>
+						</div>
+				</div>
+		</div>
+		</div>
+		
+		<div class="totop" id="goto">
+		<i class="icontop"></i>
+	</div>
+		
+		<div class="footer">
+			<div class="footertop">
+				<ul>
+					<li>
+						<a href="##" style="font-weight: bold;">我的三星</a>
+					</li>
+					<li>
+						<a href="##">我的订单</a>
+					</li>
+					<li>
+						<a href="##">我的评分</a>
+					</li>
+					<li>
+						<a href="##">优惠券</a>
+					</li>
+					<li>
+						<a href="##">个人资料</a>
+					</li>
+					<li>
+						<a href="##">收货地点</a>
+					</li>
+					<li>
+						<a href="##">售后网点查询</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="##" style="font-weight: bold;">网上购物商城</a>
+					</li>
+					<li>
+						<a href="##">购物指南</a>
+					</li>
+					<li>
+						<a href="##">支付方式</a>
+					</li>
+					<li>
+						<a href="##">订单及发票</a>
+					</li>
+					<li>
+						<a href="##">关于配送</a>
+					</li>
+					<li>
+						<a href="##">售后服务</a>
+					</li>
+					<li>
+						<a href="##">会员及优惠</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="##" style="font-weight: bold;">服务支持</a>
+					</li>
+					<li>
+						<a href="##">常见问题</a>
+					</li>
+					<li>
+						<a href="##">关于商城</a>
+					</li>
+					<li>
+						<a href="##">关于三星</a>
+					</li>
+					<li>
+						<a href="##">联系我们</a>
+					</li>
+					<li>
+						<a href="##">使用条款</a>
+					</li>
+					<li>
+						<a href="##">加为书签</a>
+					</li>
+				</ul> 
+				<div class="way">
+				<div class="sharing">官方分享</div>
+			    <div class="sharingbtn">
+				    <a href="##" class="weibo"></a>
+				    <a href="##" class="wechat"></a>
+			</div>
+			</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+	window.onload = function(){
+		$(".zoo").click(function(){
+		$(".zoo").removeClass("isactive");
+		$(".lal").css("background","url(img/icon-common.png) -131px -408px no-repeat");
+		$(this).addClass("isactive");
+	})
+		
+		$("#zfbpay").click(function(){
+			$(".age,.card,.menu1").css("display","none");
+			$(".menu").css("display","block");
+		})
+		$("#card").click(function(){
+			$(".menu,.age,.menu1").css("display","none");
+			$(".card").css("display","block");
+		})
+		$("#wangyin").click(function(){
+			$(".menu,.card,.age").css("display","none");
+			$(".menu1").css("display","block");
+		})
+		$("#fenqi").click(function(){
+			$(".menu,.card,.menu1").css("display","none");
+			$(".age").css("display","block");
+		})
+		
+		$(".card ul li i").click(function(){
+			$(".card ul li i").css("background","");
+			$(this).css("background","url(img/icon-common.png) -131px -408px no-repeat");
+		})
+		$(".stages a span").click(function(){
+		$(".stages a span").css("border","1px solid #e5e5e5");
+		$(this).css("border","3px solid #21317C");
+		})
+		
+		var selects = document.getElementById("selects");
+		var divNodes = selects.getElementsByTagName("div");
+		var divList = document.getElementsByClassName("submenu");
+		
+		for(var i = 0; i < divNodes.length; i++) {
+		divNodes[i].onclick = function() {
+			for(var m = 0; m < divList.length; m++) {
+				if(m == this.getAttribute("title")) {
+					divList[m].style.display = "block";
+				}
+				else {
+					divList[m].style.display = "none";
+				}
+			}
+		}
+	}
+		var goto = document.getElementById("goto");
+    	goto.onclick = function(){
+    		var intervalId = setInterval(function(){
+    			if(document.documentElement.scrollTop<=0){
+    				clearInterval(intervalId);
+    			}else{
+    			document.documentElement.scrollTop = document.documentElement.scrollTop - 30;
+    		    }
+    		},1)
+    	}
+    	var qu = document.getElementById("qu").getElementsByTagName("li");
+    	var choosequ = document.getElementById("choosequ");
+    	var submenu = document.getElementById("submenu");
+    	var shenfen = document.getElementById("shenfen").getElementsByTagName("li");
+    	var chooses = document.getElementById("chooses");
+    	var sc = document.getElementById("sc");
+    	var city = document.getElementById("city").getElementsByTagName("li");
+    	var choosecity = document.getElementById("choosecity");
+    	var cityc = document.getElementById("cityc");
+        for(i=0;i<qu.length;i++){
+            qu[i].onclick = function(){
+               choosequ.innerHTML = this.innerHTML;
+               submenu.style.display = "none";
+        }
+    }
+        for(j=0;j<shenfen.length;j++){
+            shenfen[j].onclick = function(){
+               chooses.innerHTML = this.innerHTML;
+               sc.style.display = "none";
+        }
+    }
+        for(m=0;m<city.length;m++){
+            city[m].onclick = function(){
+               choosecity.innerHTML = this.innerHTML;
+               cityc.style.display = "none";
+        }
+    }
+}
+	</script>
+</html>

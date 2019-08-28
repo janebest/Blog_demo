@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/player.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<style type="text/css">
+		.playerLeft{
+			    margin-left: -28px;
+			    }
+		</style>
+		</head>
+	<body>
+		 <div id="top" kw_ver="1.0.0">
+            <input type="hidden" id="REQ_ID" name="reqId" value="93bd4ab2Xb326X48e9Xbec9Xa184b58640ec">
+	        <input type="hidden" id="PROFILE_ID" name="profileId" value="site">
+	        <div class="top">
+		        <a class="logo" href="http://www.kuwo.cn"><img src="http://image.kuwo.cn/www2016/logo.jpg" alt="logo"></a>
+		        <ul class="nav">
+		        	<li><a class="active" href="http://www.kuwo.cn">首页</a></li>
+		        	<li><a href="http://www.kuwo.cn/bang/index">榜单</a></li>
+		        	<li><a href="http://www.kuwo.cn/artist/index">歌手</a></li>
+			        <li><a target="_blank" href="/down/index">下载酷我客户端</a></li>
+	        	</ul>
+		        <div class="tools">
+		        	<div class="search">
+		        		<input type="text" name="search" placeholder="找到好音乐">
+		        		<a class="searchBtn" href="javascript:;"></a>
+		        		<div class="searchInfo" style="display: none;">
+		        			<ul class="songL">
+					</ul>
+				</div>
+			</div>
+			<div class="userBox">
+				<a id="loginBtn" href="javascript:;" style="display: block;">登录</a>
+				<a id="userName" href="javascript:;" title="" style="display: none;"></a>
+				<div class="loginMenu" style="display: none;">
+					<a href="javascript:;" class="kwLogin"><i></i>酷我账号登录</a>
+					<a href="javascript:;" class="wbLogin"><i></i>新浪微博登录</a>
+					<a href="javascript:;" class="qqLogin"><i></i>QQ账号登录</a>
+				</div>
+			</div>
+			<div class="more">
+				<p>更多服务</p>
+				<ul style="height: 160px;">
+					<li><a target="_blank" href="http://y.tencentmusic.com/">腾讯音乐人</a></li>
+					<li><a target="_blank" href="http://www.kuwo.cn/web/cdpack/index">HiFi音乐</a></li>
+					<li><a target="_blank" href="http://www.kuwo.cn/static/page/anchor/index.html" class="anchorRadio">主播电台</a></li><li class="anchorVideo"><a target="_blank" href="http://www.kuwo.cn/static/page/ugcVideo/kwVideoIndex.html">酷我视频</a></li>
+					<li><a target="_blank" href="http://game.kuwo.cn">游戏</a></li>
+			</ul></div>
+			<ul class="choose opacity80">
+				<li class="show"><a target="_blank" onclick="picLog('www2016_2_xiu')" href="http://g.koowo.com/g.real?aid=text_ad_3214&amp;url=http://x.kuwo.cn/KuwoLive/OpenLiveRoomLinkForKw?from=1001008053">美女秀</a></li>
+				<li class="earphone"><a target="_blank" onclick="picLog('www2016_2_erji')" href="http://c.kuwo.cn/g.real?aid=text_ad_3315&amp;cid=&amp;url=https://detail.tmall.com/item.htm?id=522001391451">酷我耳机</a></li>
+				<li class="vip"><a target="_blank" onclick="picLog('www2016_2_vip')" href="http://vip1.kuwo.cn/vip/added/vip_2016/index.jsp?from=1">VIP会员</a></li>
+				<li class="book"><a target="_blank" onclick="picLog('www2016_2_tingshu')" href="http://tingshu.kuwo.cn/">i听</a></li>
+			</ul>
+			<div class="loginBox">
+    <div class="loginShadow" id="loginShadow" style="display: none;"></div>
+    <div class="ugcBox login boxShadow" id="shadowlogin" style="margin-top: -200px; display: none;">
+        <div class="topBox">
+            <h1>登录</h1>
+            <a href="javascript:;" class="closeWindow"></a>
+        </div>
+        <form id="loginFrom" action="/api/www/kuwoLogin" method="post">
+            <input type="hidden" name="retUrl" id="retUrl" value="http://www.kuwo.cn/">
+            <input type="hidden" name="keepLogin" id="keepLogin" value="0">
+            <input type="hidden" name="verifyCodeKey" id="verifyCodeKey" value="362962">
+            <div class="left">
+                <span class="lable">酷我账号登录</span>
+                <input placeholder="酷我账号" type="text" name="uname" class="number intInput radius">
+                <input placeholder="密码" type="password" name="password" class="pwd intInput radius" autocomplete="off">
+                <input placeholder="验证码" type="text" name="verifyCode" class="verifyCode intInput radius" autocomplete="off">
+                <img id="verifyImg" class="verifyImg" src="">
+                <div class="leftLine">
+                    <span class="checkBoxLogin checked"></span>
+                    <span class="autoLogin">自动登录</span></div>
+                <div class="zc_bot">
+                    <input name="" class="command" type="checkbox" checked="checked" value="">
+                    <label>同意
+                        <a href="http://www.kuwo.cn/static/page/license/license.html" target="_blank">《酷我音乐用户服务协议》</a>
+                        <a href="http://www.kuwo.cn/static/page/license/license_privacy.html" target="_blank">《隐私政策》</a></label>
+                </div>
+                <a href="javascript:;" class="sureUp radius20">登录</a>
+                <div class="noNum"></div>
+            </div>
+        </form>
+        <div class="right">
+            <span class="lable">第三方账号登录</span>
+            <a class="wbLogin radius20" href="javascript:;">
+                <i>
+                </i>
+                <span>新浪微博登录</span></a>
+            <a class="qqLogin radius20" href="javascript:;">
+                <i>
+                </i>
+                <span>QQ登录</span></a>
+        </div>
+    </div>
+</div>
+		</div>
+	</div>
+</div>
+	
+	     <audio autoplay="autoplay" id="mymusic">
+		<source src="11：11.mp3" type="audio/mp3">
+	</audio>
+	     <div id="player" style="bottom: -57px;">
+		<div class="playerSplice opacity95"></div>
+		<div id="playerBox">
+			<div class="player">
+				<div class="open lock"></div>
+				<div class="playerLeft">
+					<div class="musicControll">
+						<div class="prev" id="wp_playPreBtn" title="上一首"></div>
+						<div class="play" id="wp_playBtn" title="暂停/播放"></div>
+						<div class="next" id="wp_playNextBtn" title="下一首"></div>
+					</div>
+					<img id="artist_Image" src="http://image.kuwo.cn/website/pc/default/50-50.jpg" onerror="imgOnError(this,'50')">
+				</div>
+				<div class="playerMid">
+					<p id="wp_text" title="好音质 用酷我">好音质 用酷我</p>
+					<div class="barbg j-flag">
+						<div class="cur" id="cur">
+							<span class="btn f-tdn f-alpha">
+								
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="playerRight">
+					<span class="opacity" id="currenttime">00:00</span>
+					<div id="pinzhi">
+						<a class="changePz" href="javascript:down('index');">流畅</a>
+					</div>
+					<div id="controllBtn">
+						<div class="sound" id="wp_mute">
+							<div id="soundBox">
+								<div class="soundBox">
+									<div id="soundPro">
+										<div class="soundPro" id="wp_volBar"></div>
+										<a href="javascript:;" id="wp_volBtn"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="loop" id="mode" href="javascript:;" title="顺序循环"></a>
+						<a class="kSong" title="k歌" onclick="picLog('www2016_2_kge')" target="_blank" href="http://k.kuwo.cn/"></a>
+						<div class="menu" title="列表"></div>
+						<a class="down click_log" data-click="index_player_bar" title="下载" href="javascript:down('index');"></a>
+						<div class="share" title="分享">
+							<div class="shareBox">
+								<div class="sharecontent">
+									<a href="javascript:;" class="quickShare new_sina" data-cmd="tsina" title="分享到新浪微博"></a>
+									<a href="javascript:;" class="quickShare new_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+									<a href="javascript:;" class="quickShare new_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+									<a href="javascript:;" class="quickShare new_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+									<a href="javascript:;" class="quickShare new_renren" data-cmd="renren" title="分享到人人网"></a>
+								</div>
+							</div>
+						</div>
+						<div class="ewm" title="二维码">
+							
+						<div class="ewmBox"><div class="ewmCon"><img width="144" src="http://image.kuwo.cn/website/pc/ewm.png"></div></div></div>
+						<div id="addTips">
+							<p>已添加至播放列表</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	     
+	     <div id="banner">
+				<a class="tabLeft" id="tabLeft" style="display: block;" onclick="next()"><span></span></a>
+				<a class="tabRight" id="tabRight" style="display: block;" onclick="pre()"><span></span></a>
+				<ul>
+				<li class="click_log other">
+				<img src="img/1.jpg" id="img1"/>
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<!--<li class="click_log other">
+				<img src="img/2.jpg" />
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<li class="click_log other">
+				<img src="img/3.jpg" />
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<li class="click_log other">
+				<img src="img/4.jpg" />
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<li class="click_log other">
+				<img src="img/5.jpg" />
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<li class="click_log other">
+				<img src="img/6.jpg" />
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<li>
+				<img src="img/7.jpg" />
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				</li>
+				<li class="click_log other">
+				<a href="javascript:;"><div class="splice opacity50" style="left: -10.5px;"></div></a>
+				<div class="bannerConBox" style="width: 1899px;">
+						<div class="bannerCon" style="margin-left: -949.5px;">
+										<h1>酷我音乐盒</h1>
+										<p>9.0极致视听版 崭新上线</p>
+										<a class="bannerDown albumDown click_log indexAB" data-down="http://down.kuwo.cn/mbox/kwmusic_web_1_bcs_20181123.exe" data-click="www2016focus_down_1" href="javascript:;" style="margin-left: 799.5px;">下载客户端</a>
+									</div>
+								</div>
+				<img src="img/8.jpg" />
+				</li>-->
+				</ul>
+				<div id="point" style="display: block;">
+					<div class="point" style="width: 268px;">
+						<div class="pointBox" style="width: 288px;">
+							
+							<a class="" href="javascript:;"></a>
+							
+							<a href="javascript:;" class=""></a>
+							
+							<a href="javascript:;" class="active"></a>
+							
+							<a href="javascript:;" class=""></a>
+							
+							<a href="javascript:;" class=""></a>
+							
+							<a href="javascript:;" class=""></a>
+							
+							<a href="javascript:;" class=""></a>
+							
+							<a href="javascript:;" class=""></a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+	
+	     <div id="content">
+				<div id="conBanner">
+					<div class="conBanner">
+						<div class="conBox">							
+							<a target="_blank" title="易烊千玺《灾》" href="http://www.kuwo.cn/mv/52400433/?catalog=yueku2016"><img width="579" height="320" src="http://img2.kwcdn.kuwo.cn/star/upload/10/10/1542163446666_.jpg" data-src="http://img2.kwcdn.kuwo.cn/star/upload/10/10/1542163446666_.jpg" class="lazyLoad" onerror="imgOnError(this,'activity')"></a>							
+							<a target="_blank" title="《创新者》 - NINE PERCENT" href="http://www.kuwo.cn/mv/56497032?catalog=yueku2016"><img width="579" height="320" src="http://img4.kwcdn.kuwo.cn/star/upload/10/10/1542082666570_.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/upload/10/10/1542082666570_.jpg" class="lazyLoad" onerror="imgOnError(this,'activity')"></a>
+							
+						</div>
+					</div>
+				</div>
+				<div id="song" class="list">
+					<div class="title_">
+						<h2>歌单</h2>
+						<a href="http://yinyue.kuwo.cn/yy/category.htm" target="_blank">查看更多</a>
+					</div>
+					<ul>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=1082685104">
+									<img width="220" height="220" src="http://img4.kwcdn.kuwo.cn/star/upload/15/15/1461561898863_.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/upload/15/15/1461561898863_.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen">
+								<em>85364</em>
+								</span>
+								<a href="javascript:playAllPlayList(1082685104);" class="play_pl" style="display: none;"></a>
+							</div><span class="name"><a href="/playlist/index?pid=1082685104">每日最新单曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=1082685106">
+									<img width="220" height="220" src="http://img3.kwcdn.kuwo.cn/star/userpl2015/10/13/1455342310364_132026710b.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/userpl2015/10/13/1455342310364_132026710b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>107629</em></span><a href="javascript:playAllPlayList(1082685106);" class="play_pl"></a>
+							</div><span class="name"><a href="/playlist/index?pid=1082685106">酷我热门单曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=1082656711">
+									<img width="220" height="220" src="http://img3.kwcdn.kuwo.cn/star/userpl2015/10/13/1455592122915_132026710b.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/userpl2015/10/13/1455592122915_132026710b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>82138</em></span><a href="javascript:playAllPlayList(1082656711);" class="play_pl"></a>
+							</div><span class="name"><a href="/playlist/index?pid=1082656711">每日最新网络单曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=2498180359">
+									<img width="220" height="220" src="http://img3.kwcdn.kuwo.cn/star/userpl2015/93/19/1453967239975_185766193b.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/userpl2015/93/19/1453967239975_185766193b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>76716</em></span><a href="javascript:playAllPlayList(2498180359);" class="play_pl"></a>
+							</div><span class="name"><a href="/playlist/index?pid=2498180359">每日最新DJ舞曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=1185421675">
+									<img width="220" height="220" src="http://img4.kwcdn.kuwo.cn/star/userpl2015/93/19/1444623850992_185766193b.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/userpl2015/93/19/1444623850992_185766193b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>95475</em></span><a href="javascript:playAllPlayList(1185421675);" class="play_pl"></a>
+							</div><span class="name"><a href="/playlist/index?pid=1185421675">每日最新伤感情歌</a></span>
+						</li>
+
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=375757726">
+									<img width="220" height="220" src="http://img3.kwcdn.kuwo.cn/star/userpl2015/93/19/1452244369390_185766193b.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/userpl2015/93/19/1452244369390_185766193b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>97958</em></span><a href="javascript:playAllPlayList(375757726);" class="play_pl" style="display: none;"></a>
+							</div><span class="name"><a href="/playlist/index?pid=375757726">每日最新影视单曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=1163943627">
+									<img width="220" height="220" src="http://img4.kwcdn.kuwo.cn/star/userpl2015/93/19/1437030245804_185766193b.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/userpl2015/93/19/1437030245804_185766193b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>80100</em></span><a href="javascript:playAllPlayList(1163943627);" class="play_pl" style="display: none;"></a>
+							</div><span class="name"><a href="/playlist/index?pid=1163943627">每日最新90后歌曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=2507084488">
+									<img width="220" height="220" src="http://img1.kwcdn.kuwo.cn/star/userpl2013/aiting/luger/1435275959597_141050697b.jpg" data-src="http://img1.kwcdn.kuwo.cn/star/userpl2013/aiting/luger/1435275959597_141050697b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>80126</em></span><a href="javascript:playAllPlayList(2507084488);" class="play_pl" style="display: none;"></a>
+							</div><span class="name"><a href="/playlist/index?pid=2507084488">每日最新欧美单曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=423658939">
+									<img width="220" height="220" src="http://img4.kwcdn.kuwo.cn/star/userpl2013/aiting/luger/1432971445330_141050697b.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/userpl2013/aiting/luger/1432971445330_141050697b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>62772</em></span><a href="javascript:playAllPlayList(423658939);" class="play_pl" style="display: none;"></a>
+							</div><span class="name"><a href="/playlist/index?pid=423658939">每日最新日韩单曲</a></span>
+						</li>
+						<li>
+							<div class="cover">
+								<a href="/playlist/index?pid=1162443613">
+									<img width="220" height="220" src="http://img3.kwcdn.kuwo.cn/star/userpl2013/aiting/luger/1432544148941_141050697b.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/userpl2013/aiting/luger/1432544148941_141050697b.jpg" class="lazyLoad" onerror="imgOnError(this,'album')">
+								</a><span class="listen"><em>101096</em></span><a href="javascript:playAllPlayList(1162443613);" class="play_pl"></a>
+							</div><span class="name"><a href="/playlist/index?pid=1162443613">每日最新韩剧原声</a></span>
+						</li>
+					</ul>
+				</div>
+				<div id="singer" class="list">
+					<div class="title_">
+						<h2>歌手</h2>
+						<a href="/artist/index">查看更多</a>
+					</div>
+					<ul>
+						
+							
+								
+								
+									<li>
+										<img src="http://img3.kwcdn.kuwo.cn/star/upload/14/14/1525752083294_.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/upload/14/14/1525752083294_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">周杰伦</span><span>代表作：告白气球</span>
+											<div class="num"><span class="share">3976733</span><span class="like">3996413</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=周杰伦">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_7149583','name':'告白气球','artist':'周杰伦','album':'周杰伦的床边故事','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/7149583" target="_blank">告白气球</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_440613','name':'稻香','artist':'周杰伦','album':'魔杰座','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/440613" target="_blank">稻香</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_324244','name':'青花瓷','artist':'周杰伦','album':'我很忙','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/324244" target="_blank">青花瓷</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_40079875','name':'等你下课(with 杨瑞代)','artist':'周杰伦','album':'等你下课','pay':'16515324'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/40079875" target="_blank">等你下课(with 杨瑞代)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_228908','name':'晴天','artist':'周杰伦','album':'叶惠美','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/228908" target="_blank">晴天</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_118980','name':'夜曲','artist':'周杰伦','album':'十一月的萧邦','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/118980" target="_blank">夜曲</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_94237','name':'七里香','artist':'周杰伦','album':'七里香','pay':'16515324'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/94237" target="_blank">七里香</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_79479','name':'东风破','artist':'周杰伦','album':'叶惠美','pay':'16515324'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/79479" target="_blank">东风破</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img4.kwcdn.kuwo.cn/star/upload/10/10/1539082528346_.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/upload/10/10/1539082528346_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">张艺兴</span><span>代表作：SHEEP</span>
+											<div class="num"><span class="share">208104</span><span class="like">230093</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=张艺兴">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_55680994','name':'梦不落雨林','artist':'张艺兴','album':'梦不落雨林/NAMANANA','pay':'252'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/55680994" target="_blank">梦不落雨林</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_55271312','name':'Give Me A Chance','artist':'张艺兴','album':'梦不落雨林/NAMANANA','pay':'252'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/55271312" target="_blank">Give Me A Chance</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_53294802','name':'Sheep(Alan Walker Relift)','artist':'张艺兴&amp;Alan Walker','album':'Sheep(Alan Walker Relift)','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/53294802" target="_blank">Sheep(Alan Walker Relift)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_28808707','name':'羊 (SHEEP)','artist':'张艺兴','album':'SHEEP','pay':'252'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/28808707" target="_blank">羊 (SHEEP)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_40614271','name':'最好的舞台','artist':'黄渤&amp;陈伟霆&amp;张艺兴','album':'2018年中央电视台春节联欢晚会','pay':'0'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/40614271" target="_blank">最好的舞台</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6703175','name':'一个人-(电影《前任2备胎反击战》主题曲)','artist':'张艺兴','album':'一个人','pay':'0'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/6703175" target="_blank">一个人-(电影《前任2备胎反击战》主题曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_54438191','name':'面罩 (Live) ','artist':'林超泽&amp;郑锐彬&amp;张艺兴&amp;蔡徐坤&amp;韩沐伯&amp;王子异&amp;李权哲&amp;娄滋博','album':'偶像练习生 第一季','pay':'0'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/54438191" target="_blank">面罩 (Live) </a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_48639545','name':'最好的舞台','artist':'黄渤&amp;王宝强&amp;张艺兴&amp;于和伟&amp;王迅','album':'最好的舞台','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/48639545" target="_blank">最好的舞台</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img4.kwcdn.kuwo.cn/star/upload/10/10/1541041795306_.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/upload/10/10/1541041795306_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">林俊杰</span><span>代表作：不能说的秘密</span>
+											<div class="num"><span class="share">2921092</span><span class="like">2970259</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=林俊杰">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56374168','name':'雪落下的声音','artist':'林俊杰','album':'梦想的声音第三季 第2期','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/56374168" target="_blank">雪落下的声音</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_438658','name':'醉赤壁','artist':'林俊杰','album':'JJ陆','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/438658" target="_blank">醉赤壁</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_93157','name':'江南','artist':'林俊杰','album':'第二天堂','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/93157" target="_blank">江南</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56751887','name':'我们','artist':'林俊杰','album':'梦想的声音第三季 第4期','pay':'16515324'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/56751887" target="_blank">我们</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_1120967','name':'那些你很冒险的梦','artist':'林俊杰','album':'学不会','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/1120967" target="_blank">那些你很冒险的梦</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56181487','name':'不能说的秘密','artist':'林俊杰','album':'梦想的声音第三季 第1期','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/56181487" target="_blank">不能说的秘密</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_442554','name':'小酒窝','artist':'林俊杰&amp;蔡卓妍','album':'JJ陆','pay':'16515324'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/442554" target="_blank">小酒窝</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6182865','name':'可惜没如果','artist':'林俊杰','album':'新地球','pay':'16515324'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/6182865" target="_blank">可惜没如果</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img3.kwcdn.kuwo.cn/star/upload/14/14/1542100509950_.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/upload/14/14/1542100509950_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">Eminem</span><span>代表作：Without Me</span>
+											<div class="num"><span class="share">123158</span><span class="like">171691</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=Eminem">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_786910','name':'Love The Way You Lie','artist':'Eminem&amp;Rihanna','album':'恢复','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/786910" target="_blank">Love The Way You Lie</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_727117','name':'Not Afraid','artist':'Eminem','album':'I Am Marshall(Mixtape)','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/727117" target="_blank">Not Afraid</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_53308079','name':'Venom(Music From The Motion Picture)','artist':'Eminem','album':'Kamikaze','pay':'255'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/53308079" target="_blank">Venom(Music From The Motion Picture)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_3575238','name':'Rap God','artist':'Eminem','album':'Rap God','pay':'16515324'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/3575238" target="_blank">Rap God</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_22845634','name':'怪兽','artist':'Eminem&amp;Rihanna','album':'怪兽','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/22845634" target="_blank">怪兽</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_13320073','name':'Faded(LinkinStan Remix)','artist':'Fort Minor&amp;Alan Walker&amp;Eminem','album':'【歌单】酷我网友反馈华语热门歌曲合集','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/13320073" target="_blank">Faded(LinkinStan Remix)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_371019','name':'Lose Yourself','artist':'Eminem','album':'Curtain Call: The Hits','pay':'16515324'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/371019" target="_blank">Lose Yourself</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_1022029','name':'Lighters','artist':'Eminem&amp;Bruno Mars&amp;Royce Da 5‘9','album':'Marshall Carter','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/1022029" target="_blank">Lighters</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img2.kwcdn.kuwo.cn/star/upload/6/6/1542100398806_.jpg" data-src="http://img2.kwcdn.kuwo.cn/star/upload/6/6/1542100398806_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">王嘉尔</span><span>代表作：Papillon</span>
+											<div class="num"><span class="share">421285</span><span class="like">458718</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=王嘉尔">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56181489','name':'该死的温柔','artist':'王嘉尔','album':'梦想的声音第三季 第1期','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/56181489" target="_blank">该死的温柔</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56514618','name':' No Diggity','artist':'王嘉尔','album':'梦想的声音第三季 第3期','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/56514618" target="_blank"> No Diggity</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56374170','name':'Fendiman','artist':'王嘉尔','album':'梦想的声音第三季 第2期','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/56374170" target="_blank">Fendiman</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56475016','name':'Different Game(feat. Gucci Mane)','artist':'王嘉尔&amp;Gucci Mane','album':'Different Game','pay':'0'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/56475016" target="_blank">Different Game(feat. Gucci Mane)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_28503591','name':'Papillon（巴比龙）','artist':'王嘉尔','album':'Papillon（巴比龙）','pay':'0'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/28503591" target="_blank">Papillon（巴比龙）</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56374152','name':'三对三','artist':'王嘉尔&amp;阿茹汗','album':'梦想的声音第三季 第2期','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/56374152" target="_blank">三对三</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56751891','name':'Different Game','artist':'王嘉尔','album':'梦想的声音第三季 第4期','pay':'16515324'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/56751891" target="_blank">Different Game</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_35817312','name':'Okay','artist':'王嘉尔','album':'Okay','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/35817312" target="_blank">Okay</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img2.kwcdn.kuwo.cn/star/upload/3/3/1542771766595_.jpg" data-src="http://img2.kwcdn.kuwo.cn/star/upload/3/3/1542771766595_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">鹿晗</span><span>代表作：我们的明天</span>
+											<div class="num"><span class="share">445161</span><span class="like">493436</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=鹿晗">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6660024','name':'勋章-(电影《我是证人》主题曲)','artist':'鹿晗','album':'勋章','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/6660024" target="_blank">勋章-(电影《我是证人》主题曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6623026','name':'致爱 Your Song','artist':'鹿晗','album':'致爱 Your Song','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/6623026" target="_blank">致爱 Your Song</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_28604897','name':'追梦赤子心-(电影《空天猎》片尾曲)','artist':'鹿晗','album':'追梦赤子心','pay':'0'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/28604897" target="_blank">追梦赤子心-(电影《空天猎》片尾曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_12844234','name':'重返十七岁','artist':'鹿晗&amp;张丹峰&amp;Ella[陈嘉桦]&amp;大张伟&amp;潘玮柏&amp;刘敏涛','album':'','pay':'0'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/12844234" target="_blank">重返十七岁</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_54896624','name':'时间停了','artist':'鹿晗','album':'时间停了','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/54896624" target="_blank">时间停了</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_15920459','name':'让我留在你身边-(电影《摆渡人》初见版主题曲)','artist':'鹿晗','album':'让我留在你身边','pay':'0'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/15920459" target="_blank">让我留在你身边-(电影《摆渡人》初见版主题曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56695903','name':'零界点(On fire)(live)','artist':'鹿晗&amp;AR(刘夫阳)','album':'2018鹿晗RE：X巡回演唱会','pay':'16515324'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/56695903" target="_blank">零界点(On fire)(live)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_45278118','name':'另一个天堂','artist':'王祖蓝&amp;郑恺&amp;张靓颖&amp;邓超&amp;鹿晗','album':'奔跑吧 第11期','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/45278118" target="_blank">另一个天堂</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img3.kwcdn.kuwo.cn/star/upload/3/3/1532435849635_.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/upload/3/3/1532435849635_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">王源</span><span>代表作：The Wrong Things</span>
+											<div class="num"><span class="share">590211</span><span class="like">592451</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=王源">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56627016','name':'我的童年','artist':'王源','album':'一样','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/56627016" target="_blank">我的童年</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56780779','name':'天使','artist':'王源','album':'天使','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/56780779" target="_blank">天使</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56740670','name':'孤注','artist':'王源','album':'天使','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/56740670" target="_blank">孤注</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56454825','name':'一样','artist':'王源','album':'一样','pay':'16515324'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/56454825" target="_blank">一样</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56294171','name':'Will You','artist':'王源','album':'Will You','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/56294171" target="_blank">Will You</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_33881235','name':'骄傲','artist':'王源','album':'骄傲','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/33881235" target="_blank">骄傲</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6477241','name':'明天，你好','artist':'王俊凯&amp;王源','album':'明天， 你好','pay':'0'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/6477241" target="_blank">明天，你好</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_40823190','name':'因为遇见你2018版-(电影《遇见你真好》片尾曲)','artist':'王源','album':'因为遇见你2018版','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/40823190" target="_blank">因为遇见你2018版-(电影《遇见你真好》片尾曲)</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img3.kwcdn.kuwo.cn/star/upload/6/6/1542771462006_.jpg" data-src="http://img3.kwcdn.kuwo.cn/star/upload/6/6/1542771462006_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">摩登兄弟</span><span>代表作：无底洞</span>
+											<div class="num"><span class="share">1310692</span><span class="like">1325124</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=摩登兄弟">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_52273159','name':'光年之外 (Live)','artist':'摩登兄弟','album':'金曲捞第二季 第5期','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/52273159" target="_blank">光年之外 (Live)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_54002473','name':'走马','artist':'摩登兄弟','album':'走马','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/54002473" target="_blank">走马</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_46440122','name':'98k(Live)','artist':'摩登兄弟','album':'','pay':'0'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/46440122" target="_blank">98k(Live)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56276131','name':'我行即我道-(端游《新天龙八部》主题曲)','artist':'摩登兄弟','album':'我行即我道','pay':'0'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/56276131" target="_blank">我行即我道-(端游《新天龙八部》主题曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_56950846','name':'无底洞','artist':'摩登兄弟','album':'无底洞','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/56950846" target="_blank">无底洞</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_46086298','name':'探清水河(Live)','artist':'摩登兄弟','album':'','pay':'0'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/46086298" target="_blank">探清水河(Live)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_45717491','name':'我的秘密','artist':'摩登兄弟','album':'','pay':'0'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/45717491" target="_blank">我的秘密</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_42501992','name':'唐人(Live版)','artist':'摩登兄弟','album':'刘宇宁神曲(Live版)','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/42501992" target="_blank">唐人(Live版)</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img4.kwcdn.kuwo.cn/star/upload/15/15/1535459088095_.jpg" data-src="http://img4.kwcdn.kuwo.cn/star/upload/15/15/1535459088095_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">王俊凯</span><span>代表作：树读</span>
+											<div class="num"><span class="share">533223</span><span class="like">538946</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=王俊凯">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_24024788','name':'不完美小孩','artist':'王俊凯','album':'不完美小孩','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/24024788" target="_blank">不完美小孩</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_54590607','name':'我的','artist':'王俊凯','album':'我的','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/54590607" target="_blank">我的</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_7202171','name':'摩天轮的思念-(网络剧《超少年密码》插曲)','artist':'王俊凯','album':'摩天轮的思念','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/7202171" target="_blank">摩天轮的思念-(网络剧《超少年密码》插曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_8327586','name':'树读','artist':'王俊凯','album':'树读','pay':'16515324'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/8327586" target="_blank">树读</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_54775524','name':'醒着','artist':'王俊凯','album':'醒着','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/54775524" target="_blank">醒着</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_41204693','name':'明日歌 (Live) ','artist':'王俊凯','album':'经典咏流传 第11期','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/41204693" target="_blank">明日歌 (Live) </a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6477241','name':'明天，你好','artist':'王俊凯&amp;王源','album':'明天， 你好','pay':'0'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/6477241" target="_blank">明天，你好</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_40897644','name':'我在诛仙逍遥涧-(游戏《诛仙》主题曲)','artist':'王俊凯','album':'我在诛仙逍遥涧','pay':'0'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/40897644" target="_blank">我在诛仙逍遥涧-(游戏《诛仙》主题曲)</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+							
+								
+								
+									<li>
+										<img src="http://img2.kwcdn.kuwo.cn/star/upload/10/10/1541494308698_.jpg" data-src="http://img2.kwcdn.kuwo.cn/star/upload/10/10/1541494308698_.jpg" class="lazyLoad" onerror="imgOnError(this,'singer')">
+										<div class="infoSplice opacity70" style="display: block;"></div>
+										<div class="info" style="display: block;"><span class="name">Camila Cabello</span><span>代表作：Havana</span>
+											<div class="num"><span class="share">35882</span><span class="like">68674</span>
+											</div>
+										</div>
+										<div class="songListSplice opacity70" style="display: none;"></div>
+										<div class="songList" style="display: none;">
+											<h2>热门单曲</h2><a class="more" href="/artist/content?name=Camila Cabello">查看全部</a>
+											<ul>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_27486870','name':'Havana','artist':'Young Thug&amp;Camila Cabello','album':'Havana','pay':'16515324'}"><span>1.</span><a class="play" href="http://www.kuwo.cn/yinyue/27486870" target="_blank">Havana</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_31903463','name':'哈瓦那(Remix)','artist':'Camila Cabello&amp;Daddy Yankee','album':'哈瓦那','pay':'16515324'}"><span>2.</span><a class="play" href="http://www.kuwo.cn/yinyue/31903463" target="_blank">哈瓦那(Remix)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_40073245','name':'Havana','artist':'Camila Cabello','album':'卡蜜拉','pay':'16515324'}"><span>3.</span><a class="play" href="http://www.kuwo.cn/yinyue/40073245" target="_blank">Havana</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_50419871','name':'Beautiful','artist':'Camila Cabello&amp;Bazzi','album':'Beautiful','pay':'16515324'}"><span>4.</span><a class="play" href="http://www.kuwo.cn/yinyue/50419871" target="_blank">Beautiful</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_36958240','name':'Real Friends','artist':'Camila Cabello','album':'Real Friends','pay':'16515324'}"><span>5.</span><a class="play" href="http://www.kuwo.cn/yinyue/36958240" target="_blank">Real Friends</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_40073242','name':'Never Be the Same','artist':'Camila Cabello','album':'卡蜜拉','pay':'16515324'}"><span>6.</span><a class="play" href="http://www.kuwo.cn/yinyue/40073242" target="_blank">Never Be the Same</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_22522866','name':'Hey Ma(Spanish Version)-(电影《速度与激情8》插曲)','artist':'Pitbull&amp;J Balvin&amp;Camila Cabello','album':'速度与激情8 电影原声带','pay':'240'}"><span>7.</span><a class="play" href="http://www.kuwo.cn/yinyue/22522866" target="_blank">Hey Ma(Spanish Version)-(电影《速度与激情8》插曲)</a></li>
+												
+													
+													
+													<li data-music="{'id':'MUSIC_6717822','name':'I Know What You Did Last Summer','artist':'Shawn Mendes&amp;Camila Cabello','album':'I Know What You Did Last Summer','pay':'16515324'}"><span>8.</span><a class="play" href="http://www.kuwo.cn/yinyue/6717822" target="_blank">I Know What You Did Last Summer</a></li>
+												
+											</ul><a class="playAllSong" href="javascript:;">播放全部</a>
+										</div>
+									</li>
+								
+							
+						
+					</ul>
+				</div>
+				<div id="delay_load_web2016_home_img" class="list" style="display:none;"><div id="web2016_home_img_div_0" style="display: none;"><iframe width="1200" height="108" scrolling="no" frameborder="0" src="http://wa.kuwo.cn/lyrics/img/kwgg/adv5717/index.htm?ver="></iframe></div><div id="web2016_home_img_div_1" style="display: block;"><iframe width="1200" height="108" scrolling="no" frameborder="0" src="http://wa.kuwo.cn/lyrics/img/kwgg/adv5794/index.htm?ver="></iframe></div></div>
+			</div>
+	</body>	
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+	    
+	    var picArr=new Array("img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg","img/8.jpg")
+    	var index=0;
+   	    function next(){
+        	index++;
+        	if(index==picArr.length){
+            	index=0;
+        	}
+        	document.getElementById("img1").src=picArr[index];
+    	}
+    	function pre(){
+        	index--;
+        	if(index<0){
+            	index=picArr.length-1;
+        	}
+        	document.getElementById("img1").src=picArr[index];
+    	}
+
+	</script>
+</html>

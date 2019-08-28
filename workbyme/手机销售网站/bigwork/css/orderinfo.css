@@ -1,0 +1,463 @@
+@charset "utf-8";
+
+.content {
+	position: relative;
+	width: 1280px;
+    margin: auto;
+}
+.order {
+	margin-top: 22px;
+}
+.myorder {
+	font-size: 24px;
+    line-height: 28px;
+}
+.orderlist ul {
+    position: relative;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    height: 87px;
+}
+.orderlist ul li {
+	height: 87px;
+	float: left;
+	width: 20%;
+}
+.orderlist ul li a {
+	position: absolute;
+    margin-left: 101px;
+    margin-top: 34px;
+}
+.isclick {
+	color: #FFFFFF;
+	font-weight: bold;
+	background: #21317C;
+}
+.shouhuo {
+	margin-top: 25px;
+}
+.tab {
+	border: 2px solid #f2f2f2;
+}
+.bought {
+	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #3c3c3c;
+    table-layout: fixed;
+}
+.boughthead tr {
+	background: #F2F2F2;
+}
+.odernumber td {
+	border: 1px solid #F2F2F2;
+	border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: #F2F2F2;
+}
+.odernumber label {
+	margin-left: 25px;
+}
+.odernumber label span {
+	width: 30%;
+}
+.date {
+	margin-right: 10px;
+    font-weight: 700;
+}
+.odernumber label img {
+	margin-top: 4px;
+	width:30px;
+}
+.odernumber label a {
+	color: #337AB7;
+	margin: 8px 0 0 16px;
+    position: absolute;
+}
+.buyphone {
+	margin: 21px 0px 16px 50px;
+}
+.buyphone img {
+	width: 80px;
+	height: 80px;
+	border: 1px solid #337AB7;
+}
+.some {
+	margin: -89px 0 31px 145px;
+}
+.price {
+	    width: 1014px;
+    margin: 2em 0 5em 14em;
+}
+.price p {
+	margin-top: -1em;
+	width: 17.666666%;
+    font-size: 12px;
+    float: left;
+}
+.info {
+	color: #337AB7;
+}
+.footer {
+	margin-top: 150px;
+}
+.container {
+	width: 1280px;
+    height: auto;
+    margin: auto;
+}
+.checkout {
+	margin-top: 28px;
+}
+.checkouttitle {
+	margin-bottom: 10px;
+    color: #333;
+    font-size: 22px;
+}
+.titlebg {
+	width: 800px;
+	height: 50px;
+    line-height: 50px;
+    background-color: #ededed;
+    font-size: 18px;
+    color: #333;
+    text-indent: 20px;
+    margin-top: 30px;
+}
+.rowlist {
+	width: 49%;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+.formgroup {
+	margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.address {
+	width: 100%;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+.selects {
+	margin: 6px 0px;
+    position: relative;
+}
+.shengfen ,.city ,.qu {
+	margin-right: 10px;
+	width: 26.333333%;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    border: 1px solid #e5e5e5;
+}
+.citytext {
+	height: 28px;
+    line-height: 28px;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    width: auto;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    text-indent: 10px;
+}
+.viewport {
+	width: 26.3%;
+	height: 200px;
+	border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+.citycontent {
+	position: relative;
+}
+.citycontent li {
+	border-top: 1px solid #f7f7f7;
+}
+.citycontent li a {
+	font-size: 12px;
+    padding: 6px 10px;
+}
+.caret {
+	background: url(../img/icon-caret-down.png) no-repeat scroll 0 0 transparent;
+    height: 9px;
+    width: 12px;
+    right: 10px;
+    margin-top: -4px;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+}
+.more {
+	width: 100%;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+.forminput input {
+	margin-top: 14px;
+	height: 30px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 0;
+    padding-top: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+.payment {
+	margin: 15px 10px 0;
+}
+.payment ul {
+	border: 0;
+    max-width: 760px;
+    position: relative;
+}
+.payment ul li {
+	float: left;
+    width: 20%;
+    vertical-align: top;
+}
+.payment ul li a span {
+	display: block;
+    text-align: center;
+    
+    padding: 12px 0;
+    position: relative;
+    font-size: 13px;
+    background-color: #fff;
+}
+.zoo{
+	border: 1px solid #e5e5e5;
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin: 4px 4px;
+}
+.menu,.menu1 {
+	top: 100%;
+    padding: 30px 0;
+    background-color: transparent;
+}
+.paycol,.paycol1 {
+	width: 20%;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+.radio,.radio1 {
+	left: 32px;
+    margin-top: -14px;
+    position: absolute;
+    background: url(../img/icon-pay-alipay.png) no-repeat scroll transparent;
+    width: 76px;
+    height: 29px;
+}
+.paycol i,.paycol1 i {
+    left: 0;
+    margin-top: -11px;
+    position: absolute;
+    top: 50%;
+    background: url(../img/icon-common.png) -174px -408px no-repeat scroll transparent;
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+.paymenu {
+    top: 100%;
+    padding: 30px 0;
+    background-color: transparent;
+}
+.paymenu ul {
+	position: relative;
+}
+.paymenu ul li {
+	float: left;
+}
+.card ul li {
+	float: left;
+    width: 18%;
+    margin-top: 41px;
+    margin: 41px 256px 0 -265px;
+}
+.zsradio {
+	margin-left: 27px;
+	width: 113px;
+    margin-top: -14px;
+    position: absolute;
+    background: url(../img/icon-pay-zs.png) no-repeat scroll transparent;
+    height: 29px;
+}
+.gdradio {
+	margin-left: 27px;
+	width: 113px;
+    margin-top: -14px;
+    position: absolute;
+    background: url(../img/icon-pay-gd.png) no-repeat scroll transparent;
+    height: 29px;
+}
+.gsradio {
+	margin-left: 27px;
+	width: 113px;
+    margin-top: -14px;
+    position: absolute;
+    background: url(../img/icon-pay-gs.png) no-repeat scroll transparent;
+    height: 29px;
+}
+.jsradio {
+	margin-left: 27px;
+	width: 113px;
+    margin-top: -14px;
+    position: absolute;
+    background: url(../img/icon-pay-js.png) no-repeat scroll transparent;
+    height: 29px;
+}
+.card ul li i {
+	background-position: -132px -408px;
+    left: 0;
+    margin-top: -11px;
+    position: relative;
+    top: 50%;
+    background: url(../img/icon-common.png) -174px -408px no-repeat scroll transparent;
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+.stages {
+	display: inline-block;
+    position: relative;
+    padding-top: 13px;
+    margin-right: 22px;
+}
+.stages a span {
+	height: 29px;
+    line-height: 29px;
+    display: block;
+    min-width: 92px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    background-color: #fff;
+}
+.stages p {
+	margin: 7px 0 0 5px;
+    font-size: 12px;
+    color: #333;
+}
+.tips {
+	margin-top: 4px;
+    line-height: 18px;
+    margin-left: 40px;
+    font-size: 12px;
+    color: #666;
+    margin: 15px 0 0 0;
+}
+.checkright {
+	float: left;
+	width: 400px;
+    margin-left: 828px;
+    position: absolute;
+}
+.titlebgright {
+	width: 400px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ededed;
+    font-size: 18px;
+    color: #333;
+    text-indent: 20px;
+    margin-top: 30px;
+}
+.detailed,.orderpart {
+	border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.detailed {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 4px 0px 12px 0px;
+}
+.table ul li span {
+	margin-left: 50px;
+    font-size: 12px;
+    color: #333;
+    padding: 15px 20px;
+}
+.orderpart ul {
+	margin-bottom: 13px;
+    float: left;
+    margin-left: -2px;
+    width: 398px;
+}
+.orderpart ul li {
+	font-size: 12px;
+    color: #333;
+	float: left;
+}
+.orderpart ul li p {
+	font-size: 12px;
+    color: #333;
+}
+.orderpart ul li img {
+	border: 1px solid lightgray;
+	width: 50px;
+	height: 50px;
+}
+.checkoutnums p {
+	margin-left: 34px;
+	font-size: 14px;
+    color: #333;
+}
+.checkoutnums p span {
+    margin-left: 189px;
+}
+.say p {
+	padding: 20px;
+    font-size: 14px;
+    color: #333;
+}
+.say input {
+	margin-left: 19px;
+	padding: 6px 70px 0 20px;
+}
+.wojieshou {
+    margin-top: -10px;
+    position: relative;
+    top: 50%;
+    background: url(../img/icon-common.png) 0 -408px no-repeat scroll transparent;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+#red {
+	color: red;
+}
+.btnsubmit {
+    display: inline-block;
+    width: 200px;
+    margin: 28px 0 0 176px;
+    height: 50px;
+    padding: 0;
+    line-height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    background-color: #1428a0;
+}
+.footer {
+	margin-top: 885px;
+}
+
+
+.isactive {
+	border: 3px solid#21317C;
+}
+.iactive {
+	background: url(../img/icon-common.png) -131px -408px no-repeat scroll transparent;
+}
+.waytopay{
+	margin: 68px 0 0 24px;
+}

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title></title>
+    <link rel="stylesheet" href="css/teachers.css">
+    <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<div class="teachers_banner">
+    <div class="container clearfix teachers_b">
+        <div class="slide" id="slide">
+            <ul>
+                <li> <img src="images/teacher01.jpg" alt="林奇涵" title=""> </li>
+                <li> <img src="images/teacher02.jpg" alt="易星晨" title=""> </li>
+                <li> <img src="images/teacher03.jpg" alt="曾海阳" title=""> </li>
+                <li> <img src="images/teacher04.jpg" alt="狄俊祺" title=""> </li>
+                <li> <img src="images/teacher05.jpg" alt="仲颖鸣" title="" /> </li>
+                <li> <img src="images/teacher06.jpg" alt="徐晓磊" title="" /> </li>
+            </ul>
+            <div class="arrow">
+                <div class="prev">
+                    <</div> <div class="next">>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        /*图片位置数据*/
+        var datas = [
+            { 'z-index': 6, opacity: 1, width: 760, height: 330, top: 40, left: 0 },
+            { 'z-index': 4, opacity: 0.6, width: 560, height: 243, top: 80, left: -225 },
+            { 'z-index': 3, opacity: 0.4, width: 480, height: 203, top: -10, left: -170 },
+            { 'z-index': 2, opacity: 0.2, width: 620, height: 269, top: -60, left: 110 },
+            { 'z-index': 3, opacity: 0.4, width: 480, height: 203, top: -10, left: 430 },
+            { 'z-index': 4, opacity: 0.6, width: 560, height: 243, top: 80, left: 420 },
+        ]
+        move();
+        function move() {
+            /*图片分布*/
+            for (var i = 0; i < datas.length; i++) {
+                var data = datas[i];
+                $('#slide ul li').eq(i).css('z-index', data['z-index']);
+                $('#slide ul li').eq(i).stop().animate(data, 1200);
+            }
+        }
+        /*左箭头事件*/
+        $('.prev').on('click', function () {
+            var last = datas.pop();
+            datas.unshift(last);
+            move();
+        })
+        /*右箭头事件处理函数*/
+        function nextYewu() {
+            var first = datas.shift();
+            datas.push(first);
+            move();
+        }
+        /*右箭头事件*/
+        $('.next').on('click', nextYewu);
+        /*自动播放*/
+        var timer = setInterval(function () {
+            nextYewu();
+        }, 5000);
+        /*鼠标进入slide显示箭头,清除自动播放*/
+        $('#slide').on({
+            mouseenter: function () {
+                $('.arrow').css('display', 'block');
+                clearInterval(timer);
+            }, mouseleave: function () {
+                $('.arrow').css('display', 'none');
+                /*鼠标离开时自动播放*/
+                clearInterval(timer);
+                timer = setInterval(function () {
+                    nextYewu();
+                }, 5000)
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

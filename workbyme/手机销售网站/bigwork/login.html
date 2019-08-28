@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div style="width: 630px;margin-left: 70px;">
+			<p class="title-left-welcome">欢迎登录三星网上商城</p>
+		    <p class="title-left-discount">登录三星账号购机可获得三星积分及优惠券领取使用</p>
+		</div>
+		<div>
+			<img src="img/title.png" id="title" />
+		</div>
+		<div class="sign">
+			<form id="formid" method = 'post'  action = 'user_login_submit.action'  >
+				<div class="form-item">
+					<label>用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;&nbsp;名</label>
+					<input type="text" name="" class="myinput" id="userid" maxlength="20" minlength="4">
+				</div>
+				<div class="form-item">
+					<label>密码</label>
+					<input type="text" name="" class="myinput" id = "passid" maxlength="20" minlength="6">
+				</div>
+				<div class="form-yzm">
+					<label>验证码</label>
+					<input type="text" name="" class="isinput"maxlength="4" minlength="6">
+					<img src="img/yzm.jpg" />
+				</div>
+				<div class="choose">
+					<input type="radio" name="" />
+					<label>记住我</label>
+				</div>
+				<div class="forget">
+					<a href="##">忘记密码</a>
+					<i>？？</i>
+				</div>
+				<button type="submit" class="register" onclick = "checkUser();">立即登陆</button>
+			</form>
+		</div>
+		
+		<div class="totop" id="goto">
+		<i class="icontop"></i>
+	</div>
+	</body>
+	<script type="text/javascript">
+	window.onload = function(){
+		var goto = document.getElementById("goto");
+    	goto.onclick = function(){
+    		var intervalId = setInterval(function(){
+    			if(document.documentElement.scrollTop<=0){
+    				clearInterval(intervalId);
+    			}else{
+    			document.documentElement.scrollTop = document.documentElement.scrollTop - 30;
+    		    }
+    		},1)
+    	}
+   function checkUser(){
+   var result = document.getElementById("userid").value;
+   var password = document.getElementById("passid").value;
+
+   if(result == ""  ){
+     alert("用户名不能为空");
+     return false;
+   }
+   if(password == ""  ){
+    alert("密码不能为空");
+     return false;
+   }
+  document.getElementById("formid").submit();
+}
+  }
+	</script>
+</html>

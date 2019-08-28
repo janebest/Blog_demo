@@ -1,0 +1,199 @@
+@charset "utf-8";
+.content {
+	width: 1180px;
+	height: auto;
+	margin: auto;
+}
+.shopcart {
+	margin-top: 42px;
+}
+.shopcartlist {
+	border-bottom: 1px solid lightgrey;
+}
+.shopcarttitle span {
+	font-size: 24px;
+    line-height: 28px;
+}
+.shopcartlisttitle {
+	padding-top: 27px;
+	position: relative;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    height: 50px;
+}
+.shopcartlisttitle ul li {
+	float: left;
+	margin-left: 188px;
+}
+.cartlist {
+	position: relative;
+    padding: 19px 0 19px 176px;
+}
+.iconchecked {
+	position: absolute;
+    left: 20px;
+    top: 50%;
+    margin-top: -10px;
+    background: url(../img/icon-common.png) 0 -408px no-repeat scroll transparent;
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+.cartinfo {
+	min-height: 102px;
+    padding-right: 20px;
+}
+.cartinfo div {
+	float: left;
+}
+.shopcartgoods {
+	width: 25%;
+}
+.shopcartleftimg {
+	position: absolute;
+    left: 59px;
+    top: 0;
+    margin-top: 20px;
+}
+.shopcartleftimg a {
+	border: 1px solid lightgray;
+	color: #333;
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+}
+.shopcartgoods a:hover {
+	color: #337AB7;
+}
+.info {
+	width: 138px;
+	color: #333;
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+}
+.unitdiscount {
+	margin-left: -91px;
+	width: 15%;
+    text-align: center;
+}
+.shopcartjifen {
+	width: 20%;
+	margin-left: 67px;
+    text-align: center;
+}
+.shopcartqty {
+	width: 23%;
+    text-align: center;
+    margin-left: 101px;
+}
+.calculatenum {
+	width: 76px;
+    height: 22px;
+    margin: 0 auto 8px;
+    border: 1px solid #e5e5e5;
+}
+.qtybtnleft {
+	display: block;
+    float: left;
+    width: 22px;
+    height: 22px;
+}
+.minus {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 6px 0 0 6px;
+    background: url(../img/icon-common.png) -122px -40px no-repeat;
+}
+.qtyinput {
+	margin-top: -16px;
+	float: left;
+    width: 30px;
+    height: 21px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
+}
+.qtybtnright {
+	margin-top: -16px;
+	display: block;
+    float: left;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.leftplus {
+	display: block;
+    width: 10px;
+    height: 10px;
+    margin: -10px 0 0 59px;
+    background: url(../img/icon-common.png) -122px 0 no-repeat;
+}
+.shopcartremove {
+	display: inline-block;
+    font-size: 12px;
+    color: #666;
+    text-decoration: underline;
+    margin: 33px 0 0 -225px;
+}
+.sumbox {
+	padding: 29px 0;
+}
+.shopcar {
+	display: inline-block;
+    width: 22px;
+    height: 18px;
+    margin: 0 11px -2px 3px;
+    background: url(../img/icon-common.png) -122px -114px no-repeat;
+}
+.shopcostsum {
+	float: right;
+}
+.sumtitle {
+	margin-right: 30px;
+    line-height: 24px;
+}
+.sumnum {
+	font-size: 22px;
+    color: #1428a0;
+    font-weight: bold;
+    line-height: 24px;
+    float: right;
+}
+.shopcartpay {
+	margin-top: 28px;
+	height: 50px;
+	background-color: #f2f2f2;
+}
+.btn {
+    float: right;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 0;
+    border: 0;
+    background-color: #1428a0;
+}
+.continue {
+	float: left;
+    color: #1428a0;
+    font-size: 16px;
+    line-height: 50px;
+    margin-left: 21px;
+}
+.arrow {
+	display: inline-block;
+    width: 8px;
+    height: 14px;
+    margin: 0 5px -1px 0;
+    background: url(../img/icon-common.png) -122px -142px no-repeat;
+}
+.footer {
+	margin-top: 100px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/register.css" />
+	</head>
+	<body>
+		<div class="wel" id="git"></div>
+		
+		<div class="totop" id="goto">
+		<i class="icontop"></i>
+	</div>
+	    <div class="content" style="    margin-left: 15em;">
+	    	<div class="sign">
+			<form>
+				<form action="" method="post">
+            <div class="flrg-1">
+                <h3>注册</h3>
+                <div class="a">
+                    <input type="text" class="in-1" placeholder="您的用户名">
+                </div>
+                <div class="a">
+                    <input type="password" class="in-1" placeholder="输入密码">
+                </div>
+                <div class="a">
+                    <input type="password" class="in-1" placeholder="再次确认密码">
+                </div>
+                <div class="a">
+                    <input type="text" class="in-1" placeholder="输入手机号码">
+                </div>
+                <div class="a">
+                    <input type="email" class="in-1" placeholder="输入邮箱地址">
+                </div>
+                <div class="a">
+                    <button type="button">注册</button>
+                </div>
+            </div>
+        </form>
+			</form>
+		</div>
+	    </div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		var goto = document.getElementById("goto");
+    	goto.onclick = function(){
+    		var intervalId = setInterval(function(){
+    			if(document.documentElement.scrollTop<=0){
+    				clearInterval(intervalId);
+    			}else{
+    			document.documentElement.scrollTop = document.documentElement.scrollTop - 30;
+    		    }
+    		},1)
+    	}
+
+	</script>
+</html>

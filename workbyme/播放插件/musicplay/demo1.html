@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body, ul {
+			margin: 0;
+			padding: 0;
+		}
+		.m-playbar {
+			position: absolute;
+			width: 100%;
+    		height: 53px;
+    		margin: 0 auto;
+		}
+		.bg {
+			height: 53px;
+    		zoom: 1;
+    		background: url(img/playbar.png) repeat-x 0px 0px;
+		}
+		.m-playbar .wrap {
+			position: absolute;
+    		left: 50%;
+    		top: 6px;
+    		z-index: 15;
+    		width: 980px;
+    		height: 47px;
+		}
+		.m-playbar .btns {
+    		width: 137px;
+    		padding: 6px 0 0 0;
+    		float: left;
+		}
+		.m-playbar .btns a {
+		    display: block;
+		    float: left;
+		    width: 28px;
+		    height: 28px;
+		    margin-right: 8px;
+		    margin-top: 5px;
+		    text-indent: -9999px;
+		    background: url(img/playbar.png);
+		}
+		.m-playbar .btns .prv {
+    		background-position: 0px -130px;
+		}
+		.m-playbar .btns .prv:hover {
+    		background-position: -30px -130px;
+		}
+		
+		/*播放和暂停按钮*/
+		.m-playbar .btns .plypas {
+			width: 36px;
+			height: 36px;		
+			margin-top: 0px;
+		}
+		
+		.m-playbar .btns .ply {
+			background-position: 0 -204px;
+		}
+		.m-playbar .btns .ply:hover {
+			background-position: -40px -204px;
+		}
+		
+		.m-playbar .btns .pas {
+			background-position: 0px -164px;
+		}
+		.m-playbar .btns .nxt {
+    		background-position: -80px -130px;
+		}
+		.m-playbar .btns .nxt:hover {
+    		background-position: -110px -130px;
+		}
+
+
+		/*进度条样式*/
+		.m-playbar .play {
+		    width: 608px;
+		    float: left;
+		    margin-top: 25px;
+		}
+		.m-pbar, .m-pbar .barbg {
+    		width: 493px;
+    		position: absolute;
+		}
+		.m-pbar .barbg {
+			background: url(img/statbar.png);
+			height: 9px;
+		}
+		.cur {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 0;
+		    height: 9px;
+		    background: url(img/statbar.png);
+		    background-position: left -66px;
+		}
+		.m-pbar .btn {
+		    position: absolute;
+		    top: -7px;
+		    right: -13px;
+		    width: 22px;
+		    height: 24px;
+		    margin-left: -11px;
+		    background: url(img/ply_btn.png);
+		}
+		.m-pbar .time {
+		    position: absolute;
+		    top: -3px;
+		    right: -84px;
+		    color: #797979;
+		    text-shadow: 0 1px 0 #121212;
+		    font-size: 12px;
+		}
+	
+		.m-playbar .wrap .btns .ivol {
+			background-position: -2px -248px;
+		}
+		
+		.m-playbar .wrap .btns .ivol:hover {
+			background-position: -31px -248px;
+		}
+		
+		.m-playbar .wrap .btns .one {
+			background-position: -3px -344px;
+		}
+
+		.m-playbar .wrap .btns .one:hover {
+			background-position: -33px -344px;
+		}
+
+		.m-playbar .wrap .btns .loopone {
+			background-position: -63px -344px;
+		}
+		.m-playbar .wrap .btns .loopone:hover {
+			background-position: -90px -344px;
+		}
+	</style>
+</head>
+<body>
+	<audio autoplay id="mymusic">
+		<source src="01.mp3" type="audio/mp3">
+
+	</audio>
+	<div class="m-playbar m-playbar-lock" style="position: fixed; bottom: 0px;">
+		<div class="updn">
+			<div class="left">
+			</div>
+			<div class="right">
+				
+			</div>
+		</div>
+		<div class="bg">
+			
+		</div>
+		<div class="wrap" style="margin-left: -498.5px;">
+			<div class="btns">
+				<a href="##" class="prv" title="上一首"></a>
+				<a href="##" class="plypas ply" title="播放/暂停" id="plp"></a>
+				<a href="##" class="nxt" title="下一首">下一首</a>
+			</div>
+			<div class="play">
+				<div class="m-pbar">
+					<div class="barbg j-flag" id="bar">
+						<div class="cur" id="cur">
+							<span class="btn f-tdn f-alpha">
+								
+							</span>
+						</div>
+					</div>
+					<div class="j-flag time">
+						<span class="currenttime" id="currenttime">00:00</span>
+						<span class="duration" id="duration">00:00</span>
+					</div>
+				</div>
+			</div>
+			<div class="btns">
+				<a href="##" class="ivol"></a>
+				<a href="##" class="one" id="loopone"></a>
+			</div>
+		</div>
+	</div>
+</body>
+<!-- <script type="text/javascript" src="music.js"></script> -->
+<script type="text/javascript">
+	window.onload = function() {
+		var plp = document.getElementById("plp");
+		var loopone = document.getElementById("loopone");
+		var mymusic = document.getElementById("mymusic");
+		var duration = document.getElementById("duration");
+		var timenow = document.getElementById("currenttime");
+		var cur = document.getElementById("cur");
+		var intervalId;
+
+		function changetimer(){
+			var currenttime = mymusic.currentTime;
+			var currentminute = parseInt(currenttime/60);
+			var currentsecond = parseInt(currenttime%60);
+			if(currentminute<10){
+				currentminute = "0"+currentminute;
+			}
+			if(currentsecond<10){
+				currentsecond = "0"+currentsecond;
+			}
+			timenow.innerHTML = currentminute + ":" + currentsecond;
+			var percent = (100*mymusic.currentTime/mymusic.duration)+"%";
+			cur.style.width = percent;
+		}
+
+		plp.onclick = function(){
+			if(this.className=="plypas pas"){
+				mymusic.pause();
+				clearInterval(intervalId);
+				this.className = "plypas ply";
+			}else{
+				mymusic.play();
+				setInterval(changetimer,1000);
+				this.className = "plypas pas";
+			}
+		}
+		loopone.onclick = function(){
+			if(this.className =="loopone"){
+				this.className = "one";
+			}else{
+				this.className = "loopone";
+			}
+		}
+		/*得到总时长*/
+		setTimeout(function(){
+			var musicduration = mymusic.duration;
+			var totalminute = parseInt(musicduration/60);
+			var totalsecond = parseInt(musicduration%60);
+			if(totalminute<10){
+				totalminute = "0" +totalminute;
+			}
+			if(totalsecond<10){
+				totalsecond = "0" +totalsecond;
+			}
+			duration.innerHTML = totalminute + ":" + totalsecond;
+		},1000)
+		}
+</script>
+</html>

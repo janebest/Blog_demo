@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" type="text/css" href="css/ugc.css">
+</head>
+	<body avalonctrl="player">
+    <div id="register-content">
+        <div id="register-form">
+            <div class="phoneRegister">
+                <div class="form-item form-item-phone" id="form-item-phone">
+                    <label>手　机　号</label>
+                    <span class="placeholder">请使用常用手机注册</span>
+                    <input type="text" id="form-phone" name="regPhone" class="field" autocomplete="off" maxlength="11" placeholder=" " warning="此处不能为空"></div>
+                <div class="input-tip">
+                    <span></span>
+                </div>
+            </div>
+            <a class="change" href="javascript:;">邮箱注册</a>
+            <div class="emailRegister">
+                <div class="form-item form-item-email" id="form-item-email">
+                    <label>邮　　　箱</label>
+                    <span class="placeholder">请使用常用邮箱注册</span>
+                    <input type="text" id="form-email" name="regEmail" class="field" autocomplete="off" placeholder=" " warning="此处不能为空"></div>
+                <div class="input-tip">
+                    <span></span>
+                </div>
+            </div>
+            <div class="form-item form-item-name" id="form-item-name">
+                <label>昵　　　称</label>
+                <span class="placeholder">2~16位中文、英文、数字等</span>
+                <input type="text" id="form-name" name="regName" class="field" autocomplete="off" maxlength="16" placeholder=" " warning="此处不能为空"></div>
+            <div class="input-tip">
+                <span></span>
+            </div>
+            <div class="form-item">
+                <label>设 置 密 码</label>
+                <span class="placeholder">6~16位，需组合字母、数字或符号</span>
+                <input type="password" name="regPwd" id="form-pwd" class="field" maxlength="16" placeholder=" " warning="此处不能为空"></div>
+            <div class="input-tip">
+                <span></span>
+            </div>
+            <div class="form-item">
+                <label>确 认 密 码</label>
+                <span class="placeholder">请再次输入密码</span>
+                <input type="password" name="regPwdRepeat" id="form-equalTopwd" class="field" placeholder=" " maxlength="16" warning="此处不能为空"></div>
+            <div class="input-tip">
+                <span></span>
+            </div>
+            <div class="form-item form-item-authcode">
+                <label>验　证　码</label>
+                <span class="placeholder">请输入验证码</span>
+                <input type="text" autocomplete="off" name="authCode" id="form-authCode" maxlength="6" class="field form-authcode" placeholder=" " warning="此处不能为空">
+                <img class="img-code" title="换一换" id="imgAuthCode" onclick="this.src=&#39;http://www.kuwo.cn/api/user/register/picVerifyCode?kws=&#39;+new Date().getTime()" src="img/picVerifyCode"></div>
+            <div class="input-tip">
+                <span></span>
+            </div>
+            <div class="form-item form-item-phonecode">
+                <label>手机验证码</label>
+                <span class="placeholder">请输入手机验证码</span>
+                <input type="text" name="mobileCode" maxlength="6" id="form-phoneCode" class="field phonecode" placeholder=" " autocomplete="off" warning="此处不能为空">
+                <button id="getPhoneCode" class="btn-phonecode" type="button">获取验证码</button></div>
+            <div class="input-tip">
+                <span></span>
+            </div>
+            <div class="zc_bot">
+                <input name="" class="command" type="checkbox" checked="checked" value="">
+                <label>同意
+                    <a href="http://www.kuwo.cn/static/page/license/license.html" target="_blank">《酷我音乐用户服务协议》</a>
+                    <a href="http://www.kuwo.cn/static/page/license/license_privacy.html" target="_blank">《隐私政策》</a></label>
+            </div>
+            <button class="btn-register">立即注册</button></div>
+    </div>
+</body>
+<script type="text/javascript"  src="js/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+	$(".placeholder").click(function(){
+		$(this).css("display","none");
+		$(this).siblings("input").focus();
+	})
+	$(".field").blur(function(){
+		var inputname = $(this).attr("name");
+		var regtxt = "";
+		switch(inputname){
+			case "regPhone":
+			regtxt = /^1([38]\d|5[0-35-9]|7[3678])\d{8}$/;
+			break;
+		}
+		if(regtxt.test($(this).val())){
+				return;
+			}else{
+				$(this).parent().css("border","1px solid red");
+				$(this).parent().next().html($(this).attr("warning"));
+			}
+	})
+</script>
+</html>

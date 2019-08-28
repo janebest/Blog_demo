@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+.medium {
+
+    width: 1200px;
+    margin: 0 auto;
+}
+.leftside {
+    position: relative;
+    width: 178px;
+    text-indent: 35px;
+    border: 1px solid #e7e7e7;
+    margin-top: 25px;
+}
+.leftside li {
+	line-height: 35px;
+}
+.leftside li a{
+	color: #747474;
+	font-size: 11px;
+}
+li.active {
+	text-indent: 33px;
+	font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    border-left: 2px solid #f0bc0f;
+}
+li.active a {
+	color: black;
+	font-size: 15px;
+}
+li.else {
+	padding-top: 10px;
+}
+li.else a{
+	font-size: 15px;
+	color: #333333;
+}
+li.line {
+	border-bottom: 1px solid #e7e7e7;
+}
+.rightside {
+    width: 979px;
+    height: 1123px;
+    padding: 0 20px;
+    position: relative;
+    margin-left: 202px;
+    margin-top: -508px;
+}
+.topside a {
+	color: black;
+}
+.topside a.select {
+    width: 24px;
+    margin-left: 9px;
+    border-radius: 50%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 16px;
+    padding-left: 10px;
+}
+.topside a.hot {
+    background-color: #f0bc0f;
+    color: #fff;
+    padding: 0 12px;
+    border-radius: 15px;
+}
+.singerlist a{
+	color: black;
+}
+.singerbox{
+    width: 1030px;
+    height: 944px;
+    overflow: hidden;
+}
+.singerli{
+    float: left;
+    width: 274px;
+    height: 163px;
+    margin: 32px 66px 40px 0;
+}
+.artistLeft img {
+	border-radius: 50%;
+}
+.artistRight {
+	width: 94px;
+    height: 193px;
+    padding-left: 20px;
+    margin-left: 154px;
+    margin-top: -166px
+}
+.artistnav {
+    width: 94px;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+.artistnav a.title.active{
+	color: black;
+	font-weight: bold;
+}
+.artistnav a.title {
+    margin-right: 4px;
+    color: #cd9800;
+}
+.hotlist {
+	line-height: 30px;
+}
+.a_name {
+	margin-left: 63px;
+}
+.page {
+    margin-left: 349px;
+    margin-top: 50px;
+}
+.footer {
+	margin-top: 47px;
+}

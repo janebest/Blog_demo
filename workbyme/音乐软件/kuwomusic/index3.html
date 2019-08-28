@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/player.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="stylesheet" type="text/css" href="css/singer.css" />
+	<body> 
+        <div id="top" kw_ver="1.0.0">
+            <input type="hidden" id="REQ_ID" name="reqId" value="93bd4ab2Xb326X48e9Xbec9Xa184b58640ec">
+	        <input type="hidden" id="PROFILE_ID" name="profileId" value="site">
+	        <div class="top">
+		        <a class="logo" href="http://www.kuwo.cn"><img src="http://image.kuwo.cn/www2016/logo.jpg" alt="logo"></a>
+		        <ul class="nav">
+		        	<li><a class="active" href="http://www.kuwo.cn">首页</a></li>
+		        	<li><a href="http://www.kuwo.cn/bang/index">榜单</a></li>
+		        	<li><a href="http://www.kuwo.cn/artist/index">歌手</a></li>
+			        <li><a target="_blank" href="/down/index">下载酷我客户端</a></li>
+	        	</ul>
+		        <div class="tools">
+		        	<div class="search">
+		        		<input type="text" name="search" placeholder="找到好音乐">
+		        		<a class="searchBtn" href="javascript:;"></a>
+		        		<div class="searchInfo" style="display: none;">
+		        			<ul class="songL">
+					</ul>
+				</div>
+			</div>
+			<div class="userBox">
+				<a id="loginBtn" href="javascript:;" style="display: block;">登录</a>
+				<a id="userName" href="javascript:;" title="" style="display: none;"></a>
+				<div class="loginMenu" style="display: none;">
+					<a href="javascript:;" class="kwLogin"><i></i>酷我账号登录</a>
+					<a href="javascript:;" class="wbLogin"><i></i>新浪微博登录</a>
+					<a href="javascript:;" class="qqLogin"><i></i>QQ账号登录</a>
+				</div>
+			</div>
+			<div class="more">
+				<p>更多服务</p>
+				<ul style="height: 160px;">
+					<li><a target="_blank" href="http://y.tencentmusic.com/">腾讯音乐人</a></li>
+					<li><a target="_blank" href="http://www.kuwo.cn/web/cdpack/index">HiFi音乐</a></li>
+					<li><a target="_blank" href="http://www.kuwo.cn/static/page/anchor/index.html" class="anchorRadio">主播电台</a></li><li class="anchorVideo"><a target="_blank" href="http://www.kuwo.cn/static/page/ugcVideo/kwVideoIndex.html">酷我视频</a></li>
+					<li><a target="_blank" href="http://game.kuwo.cn">游戏</a></li>
+			</ul></div>
+			<ul class="choose opacity80">
+				<li class="show"><a target="_blank" onclick="picLog('www2016_2_xiu')" href="http://g.koowo.com/g.real?aid=text_ad_3214&amp;url=http://x.kuwo.cn/KuwoLive/OpenLiveRoomLinkForKw?from=1001008053">美女秀</a></li>
+				<li class="earphone"><a target="_blank" onclick="picLog('www2016_2_erji')" href="http://c.kuwo.cn/g.real?aid=text_ad_3315&amp;cid=&amp;url=https://detail.tmall.com/item.htm?id=522001391451">酷我耳机</a></li>
+				<li class="vip"><a target="_blank" onclick="picLog('www2016_2_vip')" href="http://vip1.kuwo.cn/vip/added/vip_2016/index.jsp?from=1">VIP会员</a></li>
+				<li class="book"><a target="_blank" onclick="picLog('www2016_2_tingshu')" href="http://tingshu.kuwo.cn/">i听</a></li>
+			</ul>
+			<div class="loginBox">
+    <div class="loginShadow" id="loginShadow" style="display: none;"></div>
+    <div class="ugcBox login boxShadow" id="shadowlogin" style="margin-top: -200px; display: none;">
+        <div class="topBox">
+            <h1>登录</h1>
+            <a href="javascript:;" class="closeWindow"></a>
+        </div>
+        <form id="loginFrom" action="/api/www/kuwoLogin" method="post">
+            <input type="hidden" name="retUrl" id="retUrl" value="http://www.kuwo.cn/">
+            <input type="hidden" name="keepLogin" id="keepLogin" value="0">
+            <input type="hidden" name="verifyCodeKey" id="verifyCodeKey" value="362962">
+            <div class="left">
+                <span class="lable">酷我账号登录</span>
+                <input placeholder="酷我账号" type="text" name="uname" class="number intInput radius">
+                <input placeholder="密码" type="password" name="password" class="pwd intInput radius" autocomplete="off">
+                <input placeholder="验证码" type="text" name="verifyCode" class="verifyCode intInput radius" autocomplete="off">
+                <img id="verifyImg" class="verifyImg" src="">
+                <div class="leftLine">
+                    <span class="checkBoxLogin checked"></span>
+                    <span class="autoLogin">自动登录</span></div>
+                <div class="zc_bot">
+                    <input name="" class="command" type="checkbox" checked="checked" value="">
+                    <label>同意
+                        <a href="http://www.kuwo.cn/static/page/license/license.html" target="_blank">《酷我音乐用户服务协议》</a>
+                        <a href="http://www.kuwo.cn/static/page/license/license_privacy.html" target="_blank">《隐私政策》</a></label>
+                </div>
+                <a href="javascript:;" class="sureUp radius20">登录</a>
+                <div class="noNum"></div>
+            </div>
+        </form>
+        <div class="right">
+            <span class="lable">第三方账号登录</span>
+            <a class="wbLogin radius20" href="javascript:;">
+                <i>
+                </i>
+                <span>新浪微博登录</span></a>
+            <a class="qqLogin radius20" href="javascript:;">
+                <i>
+                </i>
+                <span>QQ登录</span></a>
+        </div>
+    </div>
+</div>
+		</div>
+	</div>
+</div>
+        
+                <audio autoplay="autoplay" id="mymusic">
+		<source src="11：11.mp3" type="audio/mp3">
+	</audio>
+	     <div id="player" style="bottom: -57px;">
+		<div class="playerSplice opacity95"></div>
+		<div id="playerBox">
+			<div class="player">
+				<div class="open lock"></div>
+				<div class="playerLeft">
+					<div class="musicControll">
+						<div class="prev" id="wp_playPreBtn" title="上一首"></div>
+						<div class="play" id="wp_playBtn" title="暂停/播放"></div>
+						<div class="next" id="wp_playNextBtn" title="下一首"></div>
+					</div>
+					<img id="artist_Image" src="http://image.kuwo.cn/website/pc/default/50-50.jpg" onerror="imgOnError(this,'50')">
+				</div>
+				<div class="playerMid">
+					<p id="wp_text" title="好音质 用酷我">好音质 用酷我</p>
+					<div class="barbg j-flag">
+						<div class="cur" id="cur">
+							<span class="btn f-tdn f-alpha">
+								
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="playerRight">
+					<span class="opacity" id="currenttime">00:00</span>
+					<div id="pinzhi">
+						<a class="changePz" href="javascript:down('index');">流畅</a>
+					</div>
+					<div id="controllBtn">
+						<div class="sound" id="wp_mute">
+							<div id="soundBox">
+								<div class="soundBox">
+									<div id="soundPro">
+										<div class="soundPro" id="wp_volBar"></div>
+										<a href="javascript:;" id="wp_volBtn"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a class="loop" id="mode" href="javascript:;" title="顺序循环"></a>
+						<a class="kSong" title="k歌" onclick="picLog('www2016_2_kge')" target="_blank" href="http://k.kuwo.cn/"></a>
+						<div class="menu" title="列表"></div>
+						<a class="down click_log" data-click="index_player_bar" title="下载" href="javascript:down('index');"></a>
+						<div class="share" title="分享">
+							<div class="shareBox">
+								<div class="sharecontent">
+									<a href="javascript:;" class="quickShare new_sina" data-cmd="tsina" title="分享到新浪微博"></a>
+									<a href="javascript:;" class="quickShare new_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+									<a href="javascript:;" class="quickShare new_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+									<a href="javascript:;" class="quickShare new_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+									<a href="javascript:;" class="quickShare new_renren" data-cmd="renren" title="分享到人人网"></a>
+								</div>
+							</div>
+						</div>
+						<div class="ewm" title="二维码">
+							
+						<div class="ewmBox"><div class="ewmCon"><img width="144" src="http://image.kuwo.cn/website/pc/ewm.png"></div></div></div>
+						<div id="addTips">
+							<p>已添加至播放列表</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+   
+            <div class="medium">
+            	<div class="leftside">
+            		<ul>
+            			<li class="active">
+            				<a href="##">全部歌手</a>
+            			</li>
+            			<li class="else">
+            				<a href="##">华语歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">华语男歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">华语女歌手</a>
+            			</li>
+            			<li class="line">
+            				<a href="##">华语组合</a>
+            			</li>
+            			<li class="else">
+            				<a href="##">日韩歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">日韩男歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">日韩女歌手</a>
+            			</li>
+            			<li class="line">
+            				<a href="##">日韩组合</a>
+            			</li>
+            			<li class="else">
+            				<a href="##">欧美歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">欧美男歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">欧美女歌手</a>
+            			</li>
+            			<li>
+            				<a href="##">欧美组合</a>
+            			</li>
+            		</ul>
+            	</div>
+            	<div class="rightside">
+            		<div class="topside">
+            			<a href="##" class="hot">热门</a>
+            			<a href="##" class="select ">A</a>
+            			<a href="##" class="select ">B</a>
+            			<a href="##" class="select ">C</a>
+            			<a href="##" class="select ">D</a>
+            			<a href="##" class="select ">E</a>
+            			<a href="##" class="select ">F</a>
+            			<a href="##" class="select ">G</a>
+            			<a href="##" class="select ">H</a>
+            			<a href="##" class="select ">I</a>
+            			<a href="##" class="select ">J</a>
+            			<a href="##" class="select ">K</a>
+            			<a href="##" class="select ">L</a>
+            			<a href="##" class="select ">M</a>
+            			<a href="##" class="select ">N</a>
+            			<a href="##" class="select ">O</a>
+           			    <a href="##" class="select ">P</a>
+            			<a href="##" class="select ">Q</a>
+            			<a href="##" class="select ">R</a>
+            			<a href="##" class="select ">S</a>
+            			<a href="##" class="select ">T</a>
+            			<a href="##" class="select ">U</a>
+            			<a href="##" class="select ">V</a>
+            			<a href="##" class="select ">W</a>
+            			<a href="##" class="select ">X</a>
+            			<a href="##" class="select ">Y</a>
+            			<a href="##" class="select ">Z</a>
+            			<a href="##" class="select ">#</a>
+            		</div>
+            		<div class="singerlist">
+            			<ul class="singerbox">
+            				<li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/zjl.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.告白气球</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.稻香</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.青花瓷</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.等你下课(with 杨瑞代)</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.晴天</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">周杰伦</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/srz.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.沙漠骆驼</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.沙漠骆驼(Li...</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.一生所爱(Li...</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.沙漠骆驼(伴...)</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.沙漠骆驼(Dj...</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">展展与罗罗</a>
+	                       </li>
+	                       <li class="singerli ">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/dzq.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.光年之外</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.倒数</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.喜欢你</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.夜空中最亮..</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.那一夜</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">邓紫棋</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/nv.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.再见只是陌..</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.走着走着就..</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.以后的以后</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.两个人的回忆</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.放过自己</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">庄心妍</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/ljj.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.醉赤壁</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.雪落下的声音</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.我们</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.江南</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.不能说的秘密</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">林俊杰</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/black.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.38度6</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.盗心贼</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.三十八度六</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.感谢</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.回心转意</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">黑龙</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/shasha.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.再度又相逢</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.离别的秋天</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.漂洋过海来看你</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.一抹伤</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.伤了心的女人</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">孙露</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/xzq.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.丑八怪</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.认真的雪</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.绅士</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.天后(live)</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.你还要我怎样</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">薛之谦</a>
+	                       </li>
+	                       <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/ha.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.流浪</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.我的将军啊</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.一曲相思</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.我的将军啊(Li..</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.流浪(skr版)</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">半阳</a>
+	                      </li>
+            			   <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/zxy.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.吻别</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.等你等到我</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.一路上有你</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.心如刀割</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.如果这都不算爱</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">张学友</a>
+	                       </li>
+            			   <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/old.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.001三侠五义</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.001乱世枭雄</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.001水浒全传</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.001白眉大侠</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.李自成001</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">单田芳</a>
+	                       </li>
+            			   <li class="singerli">
+	                  <div class="artist">
+	                    <a href="##" class="artistLeft">
+	                    	<img src="img/歌手/mby.jpg">
+	                    </a>
+	                       <div class="artistRight fr">
+	                          <div class="artistnav" data-id="336">
+	                          <a href="##" class="title active">热歌</a>
+	                          <a href="##" class="title">新歌</a>
+	                          <a href="##" class="title">专辑</a>
+	                 </div>
+	                  <ul class="hotlist">
+	                          <li>
+	                          	<a href="##">1.像我这样的人</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">2.消愁(Live)</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">3.木马城市</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">4.梅香如故</a>
+	                          </li>
+	                          <li>
+	                          	<a href="##">5.无问</a>
+	                          </li>
+	                  </ul>
+	                 </div>
+	              </div>
+	                        <a href="##" class="a_name">毛不易</a>
+	                       </li>
+            			</ul>
+            		<div class="page">
+            			<a href="##" class="noprev">
+            				<img src="http://image.kuwo.cn/website/pc/page/prev.png">
+            			</a>
+            			<a href="##" class="current">1</a>
+            			<a href="##" class="">2</a>
+            			<a href="##" class="">3</a>
+            			<span class="point">...</span>
+            			<a href="##" class="">6780</a>
+            			<a href="##" class="next">
+            				<img src="http://image.kuwo.cn/website/pc/page/next.png">
+            			</a>
+            		</div>
+            		</div>
+            	</div>
+            </div>
+
+<div id="footer">
+    <div class="footer">
+        <p>全力做好网上治安秩序打击整治专项行动，打造晴朗网络空间 </p>
+        <p class="f_link">
+            <a target="_blank" href="http://www.kuwo.cn/static/file/sitemap/sitemap.html">网站地图</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/contact.jsp">联系我们</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/fuwu.html">广告服务</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/introduction.jsp">诚聘英才</a> |
+            <a target="_blank" href="http://www.kuwo.cn/static/page/license/license.html">用户服务协议</a> |
+            <a target="_blank" href="http://www.kuwo.cn/static/page/license/license_privacy.html">隐私政策</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/NoBlameDoc.jsp">酷我音乐网站免责声明</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/ProtectDoc.jsp">酷我音乐权利声明</a> |
+            <a target="_blank" href="http://yinyue.kuwo.cn/yy/s2/jianhu1.jsp">未成年人家长监护工程</a>
+        </p>
+        <p>
+            北京酷我科技有限公司版权所有 网络文化经营许可证：
+            <a target="_blank" href="http://image.kuwo.cn/www/wenwangwen.pdf">京网文[2015]0525-205号</a>
+            <a id="shiting_license" target="_blank" href="http://image.kuwo.cn/www/shiting1.pdf">信息网络传播视听节目许可证0109362号</a>
+            增值电信业务经营许可证B2-20090418 京ICP证060261号
+        </p>
+        <div>
+            <a target="_blank" href="http://image.kuwo.cn/www/guangdianxuke.pdf">广播电视节目制作经营许可证京字第2037号</a>
+            <a target="_blank" href="http://image.kuwo.cn/www/yingye.pdf">营业性演出许可证京市演1574</a>
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502030216" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+				<img src="http://image.kuwo.cn/website/pc/ghs.png" style="float:left;">
+				<p style="float:left;height:20px;line-height:20px;margin: 5px 0px 0px 5px; color:#939393;">京公网安备 11010502030216号</p>
+			</a>&nbsp;&nbsp;京ICP备09014827号
+        </div>
+        <p>举报电话：010-80121810 举报邮箱：support@kuwo.cn</p>
+    </div>
+</div>
+
+	</body>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$("#loginBtn").mousemove(function(){
+           	 $(".loginMenu").css("display","block");
+    	})
+    	$("#loginBtn").mouseout(function(){
+            	$(".loginMenu").css("display","none");
+    	})
+
+    	$("#top .top .tools .more").mousemove(function(){
+    	        $(this).find('ul').css("display","block");
+    	})
+    	$("#top .top .tools .more").mouseout(function(){
+     	       $(this).find('ul').css("display","none");
+    	})
+
+
+    	$("#loginBtn").click(function(){
+    	$("#shadowlogin").css("display","block");
+    	$("#loginShadow").css("display","block");
+    	})
+    	
+    	$(".closeWindow").click(function(){
+    	$("#shadowlogin").css("display","none");
+    	$("#loginShadow").css("display","none");
+    	})
+	</script>
+</html>

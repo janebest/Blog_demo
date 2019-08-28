@@ -1,0 +1,53 @@
+{%extends 'layout.html'%}
+
+{%block content%}
+<form onsubmit="return false;">
+    <div class="search">
+        <input type="text" id="put" />
+        <button id="search">搜搜</button>
+    </div>
+</form>
+<div class="listBox">
+    <h1><i class="l1"></i>{{content.title}}<i class="l2"></i></h1>
+    <dfn id="box">
+        {{content.content}}
+    </dfn>
+</div>
+
+<div class="listBox message">
+    <h3 class="textLeft"><strong>评论</strong> <span class="em">一共有 <em id="messageCount">0</em> 条评论</span></h3>
+
+    {% if userInfo._id %}
+    <p class="textLeft clear">
+        <textarea id="messageContent"></textarea>
+        <input type="hidden" id="contentId" value="{{content.id}}">
+        <button id="messageBtn" class="submit">提交</button>
+    </p>
+    {%else%}
+    <p class="bgDanger">你还没有登录，请先登录！</p>
+    {%endif%}
+
+    <div class="messageList">
+    </div>
+</div>
+
+<script src="/public/js/comment.js"></script>
+
+<script>
+
+    window.onload = function () {
+        var oP = document.getElementById("box");
+        var put = document.getElementById("put");
+        var search = document.getElementById("search");
+        search.onclick = function () {
+            if (oP.innerHTML == '') {
+                window.location.reload();
+            } else {
+                var str = put.value;
+                if (!str) return; //若内容不存在即返回
+                oP.innerHTML = oP.innerHTML.split(str).join('<charge>' + str + '</charge>')
+            }
+        }
+    };
+</script>
+{%endblock%}

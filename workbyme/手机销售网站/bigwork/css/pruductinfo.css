@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/*商品详情内容栏*/
+.center {
+	float: left;
+}
+.content {
+	    margin-left: 13.2em;
+    height: 700px;
+}
+.contenttitle {
+	padding: 25px 170px;
+    max-width: 1220px;
+}
+.contenttitle ul li {
+	float: left;
+	margin-left: 11px;
+}
+.contenttitle ul li a {
+	color: #333333;
+}
+.contenttitle ul li a:hover {
+	color: #337AB7;
+}
+.icon-active-box {
+	width: 45px;
+	height: 121px;
+	margin: 20px 0px 0 184px;
+}
+.icon-active-box label span {
+	color: #FFFFFF;
+	line-height: 30px;
+	font-size: 18px;
+	padding-right: 9px;
+}
+.icon-orange {
+	background-color: #ed5e2f;
+	padding: 2px 6px 5px 8px;
+}
+#bigimg {
+    margin: -118px 0px 0px 239px;
+	width: 433.31px;
+	height: 433.31px;
+}
+#smallpic {
+	width: 479px;
+	height: 80px;
+    margin: 9px 0 0 200px;
+}
+#smallpic img {
+	float: left;
+	width: 75.84px;
+    margin-left: 40px;
+    border: 1px solid lightblue;
+}
+.centerright {
+	margin-left: 760px;
+	margin-top: -536px;
+}
+.rightside h1 {
+	font-size: 28px;
+    color: #333;
+    word-break: normal;
+}
+.rightsidetext p {
+	margin-top: 5px;
+    padding-bottom: 5px;
+}
+.rightsidetext ul li {
+	position: relative;
+    margin-top: 8px;
+    line-height: 24px;
+    padding-left: 72px;
+}
+.rightsidetext ul li span {
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    background: #006ec7;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+}
+.choose {
+    margin-top: 11px;
+}
+.active {
+	border: 2px solid #01b1e2!important;
+}
+.choose ul {
+    margin: -24px 0 0 71px;
+    position: relative;
+    z-index: 1;
+}
+.choose ul li {
+	display: inline-block;
+    width: 28%;
+    position: relative;
+    border: 1px solid lightgray;
+    margin: 6px 6px 6px 0px;
+}
+.icon-choose {
+	padding-bottom: 0;
+    height: 20px;
+    line-height: 37px;
+    cursor: pointer;
+}
+.icon-choose i {
+	margin: 10px 0 0 21px;
+	height: 20px;
+    position: absolute;
+    width: 20px;
+}
+.icon-choose itempropertyname {
+	margin-left: 59px;
+}
+.engier {
+    margin-top: 21px;
+}
+.engier ul {
+	position: relative;
+    margin: -19px 0 0 70px;
+}
+.engier ul li {
+	display: inline-block;
+    width: 31%;
+    position: relative;
+    border: 1px solid lightgray;
+    margin: 6px 6px 6px 0px;
+}
+.engier ul li a label {
+    height: 20px;
+    line-height: 23px;
+    cursor: pointer;
+}
+.engier ul li a label itempropertyname {
+    margin-left: 36px;
+}
+.engier ul li a label itempropertynameprice{
+	    margin-left: 76px;
+}
+.price {
+	margin-top: 28px;
+}
+.sam-block-background {
+	padding: 10px 0 0 20px;
+	margin: -23px 0 0 69px;
+	background-color: #f8f8f8;
+}
+.sam-block-text {
+	font-size: 16px;
+    color: #333;
+}
+.sam-block-right {
+    padding: 3px 0 10px;
+}
+.sam-block-deposit {
+	font-size: 28px;
+    font-weight: bold;
+}
+.btn-addCart {
+	width: 240px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: normal;
+    vertical-align: middle;
+    border: 0;
+    color: #222;
+    background: #ccc;
+    border-radius: 0;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 24px;
+    height: 48px;
+    line-height: 48px;
+    -webkit-transition: all .32s;
+    -moz-transition: all .32s;
+    -ms-transition: all .32s;
+    transition: all .32s;
+    font-weight: bold;
+    touch-action: manipulation;
+    margin: 40px 0 0 71px;
+}
+.addcart a:hover {
+	background: black;
+	color: #FFFFFF;
+}
+.product-nav {
+	height: 80px;
+    line-height: 77px;
+    background-color: #e1e3e5;
+}
+.product-nav ul {
+	position: relative;
+}
+.product-nav ul li {
+	float: left;
+}
+.product-nav ul li:first-child a{
+	font-size: 24px;
+    padding-right: 100px;
+}
+.product-nav ul li.is-active a {
+    border-color: #1428a0;
+    color: #1428a0;
+    font-weight: bold;
+}
+.product-nav ul li a {
+    font-size: 20px;
+    padding: 0 50px;
+    color: #333;
+    display: block;
+    border-bottom: 3px solid transparent;
+}
+.box1 {
+    max-width: 1040px;
+    margin: 0 auto;
+    height: auto;
+}
+.box1 .bigBox {
+	width: 70%;
+    margin: 0 auto;
+}
+.box1 .bigBox h1 {
+	color: #000;
+    background: #fff;
+    font-size: 4rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 6% 0 20px 0;
+}
+.box1 .bigBox h2 {
+	color: #000;
+    text-align: center;
+    background: #fff;
+}
+.box1 .bigBox p {
+	color: #000;
+    background: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+.boximg img {
+	width: 1040px;
+}
+.box2 a ,.box3 a{
+	font-size: 32px;
+    color: #333;
+    line-height: 1;
+    padding: 70px 0 30px 0;
+    text-align: center;
+    margin: 0;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    display: block;
+}
+.spec-section {
+    border-top: 1px solid #d0d0d0;
+}
+.spec-list {
+    padding: 0 30px 156px 48px;
+    border-bottom: 1px solid #d0d0d0;
+}
+.spec-list .spec-title {
+    float: left;
+    width: 25%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0071bf;
+    padding-top: 30px;
+    line-height: 21px;
+}
+.spec-list ul {
+    float: left;
+    width: 75%;
+    display: table;
+}
+.spec-list ul li {
+    width: 33.333%;
+    float: left;
+    padding-top: 30px;
+    display: inline-table;
+    vertical-align: top;
+}
+.spec-list li .spec-sub-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    line-height: 19px;
+}
+.spec-list li p {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 14px;
+    line-height: 19px;
+}
+.col {
+	float: left;
+	display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+.thumbnail {
+	display: block;
+    padding: 4px;
+    border-radius: 4px;
+}
+.thumbnail a{
+	border-radius: 4px;
+    font-size: 14px;
+    padding: 6px 18px 6px 18px;
+    display: block;
+    position: relative;
+}
+.thumbnail p {
+	text-align: center;
+    margin: 18px 0 0 0;
+}

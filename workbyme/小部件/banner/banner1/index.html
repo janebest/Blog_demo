@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/superslide.2.1.js"></script>
+</head>
+
+<body>
+    <div class="fullSlide">
+        <div class="bd">
+            <ul>
+                <li _src="url(images/1.jpg)">
+                    <a href="#"></a>
+                </li>
+                <li _src="url(images/2.jpg)">
+                    <a href=" #"></a>
+                </li>
+                <li _src="url(images/3.jpg)">
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <span class="prev"></span>
+        <span class="next"></span>
+    </div>
+    <script type="text/javascript">
+        $(".fullSlide").hover(function () {
+            $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+        },
+            function () {
+                $(this).find(".prev,.next").fadeOut()
+            });
+        $(".fullSlide").slide({
+            titCell: ".hd ul",
+            mainCell: ".bd ul",
+            effect: "fold",
+            autoPlay: true,
+            autoPage: true,
+            trigger: "click",
+            startFun: function (i) {
+                var curLi = jQuery(".fullSlide .bd li").eq(i);
+                if (!!curLi.attr("_src")) {
+                    curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
